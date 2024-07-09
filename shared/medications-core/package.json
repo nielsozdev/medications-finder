@@ -1,0 +1,23 @@
+{
+  "name": "@noz/medications-core",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "bun rimraf tsconfig.tsbuildinfo && bun run clean && tsc -p tsconfig.json",
+    "clean": "rimraf dist",
+    "lint": "eslint . --fix",
+    "codegen": "graphql-codegen --config codegen.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@noz/eslint-config": "workspace:*",
+    "@noz/tsconfig": "workspace:*",
+    "@types/node": "20.14.2",
+    "rimraf": "6.0.0",
+    "typescript": "5.4.5"
+  }
+}
