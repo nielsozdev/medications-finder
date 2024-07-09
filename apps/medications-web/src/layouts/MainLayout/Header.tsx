@@ -65,7 +65,7 @@ export function Header() {
           </Box>
           {/* <Box sx={{ flexGrow: 1 }} /> */}
           <Box sx={{ display: 'flex', flexGrow: 1, alignItems: 'center', px: 2 }}>
-          <AutoCompleteSearcherInput />
+            <AutoCompleteSearcherInput />
             <HeaderLocationSelectors width={105} />
           </Box>
 

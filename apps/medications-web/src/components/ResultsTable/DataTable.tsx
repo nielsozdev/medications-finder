@@ -7,10 +7,10 @@ import { Box } from '@mui/material'
 
 // import ProductTableRow from './MedicationItem'
 
+import { MedicationItem } from './MedicationItem'
+
 import { useAppStore } from '~/context/AppStoreProvider/useAppStore'
 import { EmptyContent } from '~/ui/EmptyContent'
-
-import { MedicationItem } from './MedicationItem'
 
 export function DataTable({ data }: any) {
   const { setMedicationStatus } = useAppStore((state) => state)

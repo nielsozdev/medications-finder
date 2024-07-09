@@ -6,9 +6,9 @@ import { createAutocomplete } from '@algolia/autocomplete-core'
 import { getAlgoliaResults } from '@algolia/autocomplete-preset-algolia'
 import algoliasearch from 'algoliasearch/lite'
 
-import { ENV } from '~/config/env'
-
 import { useSearchData } from './useSearchData'
+
+import { ENV } from '~/config/env'
 
 const { appId, apiKey, indexName } = ENV
 const searchClient = algoliasearch(appId, apiKey)

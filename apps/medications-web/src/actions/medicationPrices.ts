@@ -3,7 +3,6 @@
 import { revalidatePath } from 'next/cache'
 
 import prisma from '@noz/prisma/next'
-import { createFolderAndSaveFile } from '@noz/utils'
 
 import { findMedication } from '~/helpers/getCorrectSuggestion'
 

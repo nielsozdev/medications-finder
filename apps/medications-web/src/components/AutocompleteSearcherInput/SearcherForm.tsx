@@ -5,11 +5,11 @@ import { usePathname } from 'next/navigation'
 import { Close as CloseIcon } from '@mui/icons-material'
 import { Box, InputAdornment, InputBase, Paper } from '@mui/material'
 
-import { Iconify } from '~/ui/Iconify'
-
 import { SnackBar } from './Snackbar'
 import { SubmitButton } from './SubmitButton'
 import { useSearchData } from './useSearchData'
+
+import { Iconify } from '~/ui/Iconify'
 
 export function SearcherForm(props: any) {
   const { formRef, formProps, inputRef, inputProps, autoCompleteState } = props

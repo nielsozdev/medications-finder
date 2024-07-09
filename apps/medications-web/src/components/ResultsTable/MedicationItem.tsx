@@ -5,12 +5,12 @@ import { Avatar, Box, Card, CardActionArea, CardContent, CardHeader } from '@mui
 
 import { blue, yellow } from '@mui/material/colors'
 
+import { type ProductPrices } from './types'
+
 import { Iconify } from '~/ui/Iconify'
 import { Label } from '~/ui/Label'
 import { fcurrency } from '~/utils/format-number'
 import { formatText } from '~/utils/format-text'
-
-import { type ProductPrices } from './types'
 
 interface Props {
   item: ProductPrices

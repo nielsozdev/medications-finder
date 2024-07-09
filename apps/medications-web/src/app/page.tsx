@@ -1,8 +1,8 @@
-import { EmptyLayout } from '~/layouts/EmptyLayout'
-import { Iconify } from '~/ui/Iconify'
-
 import { AutoCompleteSearcherInput } from '~/components/AutocompleteSearcherInput'
 import { LocationSelectors } from '~/components/LocationSelectors'
+
+import { EmptyLayout } from '~/layouts/EmptyLayout'
+import { Iconify } from '~/ui/Iconify'
 
 // export const dynamic = 'force-dynamic'
 export default function HomePage() {

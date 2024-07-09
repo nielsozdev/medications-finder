@@ -1,7 +1,7 @@
+import { type UniqueSubfamilyNames, type UniqueProductNames, type UniqueFamilyNames, type UniqueMedications, type ProductPrices } from './types'
+
 import { formatText } from '~/utils/format-text'
 import { stringToDate } from '~/utils/stringToDate'
-
-import { type UniqueSubfamilyNames, type UniqueProductNames, type UniqueFamilyNames, type UniqueMedications, type ProductPrices } from './types'
 
 export function processResultsDataTable(data: any) {
   const uniqueSubfamilyNames = new Map<string, UniqueSubfamilyNames>()
