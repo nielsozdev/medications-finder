@@ -1,4 +1,4 @@
-import { clog } from './clog'
+import { clog } from './clog.js'
 import { createFolder } from './createFolder'
 import { writeFile } from './writeFile'
 

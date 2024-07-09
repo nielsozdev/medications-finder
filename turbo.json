@@ -1,8 +1,14 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
+    "clean": {
+      "outputs": [
+        "dist/**"
+      ]
+    },
     "build": {
       "dependsOn": [
+        "clean",
         "^build"
       ],
       "env": [

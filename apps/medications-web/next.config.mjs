@@ -3,7 +3,7 @@ const nextConfig = {
   eslint: {
     // Ignora el linting durante el build
     dirs: ['src'], // Solo ejecuta ESLint en estos directorios
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
   // eslint: {
   // },
