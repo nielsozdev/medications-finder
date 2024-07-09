@@ -1,0 +1,23 @@
+{
+  "name": "@noz/eslint-config",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true,
+  "license": "MIT",
+  "description": "ESLint config for Noz",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "7.15.0",
+    "@typescript-eslint/parser": "7.15.0",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-config-standard": "17.1.0",
+    "eslint-config-standard-with-typescript": "43.0.1",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-n": "17.9.0",
+    "eslint-plugin-promise": "6.2.0",
+    "eslint-plugin-react": "7.34.2",
+    "eslint-plugin-typescript-sort-keys": "3.2.0",
+    "prettier": "3.3.2",
+    "typescript": "5.4.5"
+  }
+}

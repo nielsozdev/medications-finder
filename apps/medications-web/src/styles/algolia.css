@@ -1,0 +1,48 @@
+.aa-Autocomplete {
+  position: relative;
+  width: 100%;
+}
+
+.aa-Autocomplete .aa-Form {
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+  border: 0;
+}
+
+.aa-Autocomplete .aa-Input {
+  color: white;
+  background-color: transparent;
+}
+
+.aa-Autocomplete .aa-SubmitIcon {
+  color: white;
+  background-color: transparent;
+}
+
+.aa-Panel {
+  z-index: 1;
+}
+
+
+/* Ocultar el icono de borrar por defecto */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="search"] {
+  -moz-appearance: none;
+}
+
+/* Estilos para el contenedor del input */
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilos para el input */
+#autocomplete {
+  padding-right: 30px;
+  /* Añadir espacio para el botón de limpiar personalizado */
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@noz/helpers",
+  "version": "0.0.0",
+  "description": "",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@noz/eslint-config": "workspace:*",
+    "@noz/tsconfig": "workspace:*",
+    "@types/node": "20.14.2",
+    "typescript": "5.4.5"
+  }
+}

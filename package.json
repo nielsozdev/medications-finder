@@ -1,0 +1,36 @@
+{
+  "name": "@noz/monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "author": {
+    "name": "Niels Olivera Zurita",
+    "email": "niels.olivera.zurita@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "shared/*",
+    "scrapers/*",
+    "servers/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "build:all": "cd packages && npm run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "@noz/tsconfig": "workspace:*",
+    "@parcel/watcher": "2.4.1",
+    "turbo": "latest",
+    "typescript": "5.4.5",
+    "tsx": "4.16.2",
+    "dotenv": "16.4.5"
+  },
+  "packageManager": "bun@1.1.18"
+}

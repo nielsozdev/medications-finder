@@ -1,0 +1,76 @@
+{
+  // "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "@noz/tsconfig/scrapers.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "@0no-co/graphqlsp",
+        "schema": "./schema.graphql"
+      }
+    ],
+    "composite": true,
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "paths": {
+      "~/*": [
+        "src/*"
+      ],
+      // "@noz/scraper-medications": [
+      //   "../../scrapers/medications"
+      // ],
+      // "@noz/medications-core": [
+      //   "../../shared/medications-core"
+      // ]
+      // "@noz/utils": [
+      //   "../../packages/utils"
+      // ],
+      // "@noz/helpers": [
+      //   "../../packages/helpers"
+      // ],
+      // "@noz/scrapers-utils": [
+      //   "../../packages/scrapers-utils"
+      // ],
+      // "@noz/scrapers-helpers": [
+      //   "../../packages/scrapers-helpers"
+      // ]
+    }
+  },
+  "include": [
+    "**/*",
+    "apollo.config.js",
+    // "src/data/**/**.json"
+  ],
+  "references": [
+    {
+      "path": "../../scrapers/medications"
+    },
+    {
+      "path": "../../shared/medications-core"
+    }
+    // {
+    //   "path": "../../packages/utils"
+    // },
+    // {
+    //   "path": "../../packages/helpers"
+    // },
+    // {
+    //   "path": "../../packages/scrapers-utils"
+    // },
+    // {
+    //   "path": "../../packages/scrapers-helpers"
+    // }
+  ],
+  // "include": [
+  //   "**/*",
+  //   "src/data/**/**.json"
+  // ],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/**",
+    "dist",
+    "package.json"
+  ]
+}
+/*
+https://github.com/microsoft/TypeScript/issues/25636
+*/

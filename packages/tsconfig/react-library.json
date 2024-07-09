@@ -1,0 +1,29 @@
+{
+  "display": "React Library",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": [
+      "ES2015"
+    ],
+    "module": "ESNext",
+    "target": "es6"
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules/**",
+    "dist",
+    "build",
+    "public",
+    ".next",
+    "**/.next/**",
+    "ideas",
+    "**/ideas/**"
+  ],
+  "include": [
+    "src",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}

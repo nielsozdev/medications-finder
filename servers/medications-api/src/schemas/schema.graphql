@@ -1,0 +1,130 @@
+type Family {
+  family: String!
+  idFamily: String!
+}
+
+type SubFamily {
+  concentration: String!
+  family: String!
+  fractions: Int!
+  group: String!
+  idFamily: String!
+  idSubFamily: String!
+  pharmaceuticalFormGroup: String!
+  pharmaceuticalFormGroupCode: String!
+  pharmaceuticalFormName: String!
+  subFamily: String!
+  totalActivePrinciple: String!
+}
+type SubFamilyWithManufacturer {
+  concentration: String!
+  family: String!
+  fractions: Int!
+  group: String!
+  idFamily: String!
+  idManufacturer: String!
+  idSubFamily: String!
+  manufacturer: Manufacturer!
+  pharmaceuticalFormGroup: String!
+  pharmaceuticalFormGroupCode: String!
+  pharmaceuticalFormName: String!
+  subFamily: String!
+  totalActivePrinciple: String!
+}
+
+type Establishment {
+  address: String!
+  commercialName: String!
+  establishmentType: String!
+  establishmentTypeId: String!
+  idEstablishment: String!
+  location: Locations!
+  phone: String
+  ubigeo: String!
+}
+
+type Manufacturer {
+  idManufacturer: String
+  location: String
+  titularName: String!
+}
+
+type Locations {
+  department: String
+  district: String
+  province: String
+}
+
+type Price {
+  establishment: Establishment!
+  family: String!
+  idExtracted: String!
+  prices: [Float!]!
+  subFamily: String!
+  suggestion: String!
+  updateAt: String!
+}
+
+type MedicationsPrice {
+  establishment: Establishment!
+  family: String!
+  idExtracted: String!
+  prices: [Float]!
+  suggestion: String!
+  updateAt: String!
+  idSubFamily: String!
+  subFamily: SubFamilyWithManufacturer!
+}
+
+#
+type SubFamilyInfo {
+  subFamily: String!
+  concentrations: [String!]!
+  fractions: [Int!]!
+  pharmaceuticalFormGroup: [String!]!
+  pharmaceuticalFormName: [String!]!
+  count: Int!
+}
+
+type FamilyInfo {
+  family: String!
+  subFamilies: [SubFamilyInfo!]!
+  totalConcentrations: [String!]!
+  totalFractions: [Int!]!
+  totalPharmaceuticalFormGroup: [String!]!
+  totalPharmaceuticalFormName: [String!]!
+  count: Int!
+}
+
+#
+type SearchResults {
+  familiesWithSubFamilies: [FamilyInfo!]!
+  allFamilies: [String]
+  allSubFamilies: [String]
+  allConcentrations: [String]
+  allFractions: [Int]
+  allPharmaceuticalFormGroup: [String]
+  allPharmaceuticalFormName: [String]
+}
+
+type Query {
+  allMedicationPrices: [MedicationsPrice!]!
+  medicationPrices(
+    medication: String!
+    department: String!
+    province: String!
+    district: String
+  ): [MedicationsPrice!]!
+
+  # getFamily(medication: String!): Family!
+  # getSubFamily(medication: String!): [SubFamily!]!
+  getMedicationPrices(
+    medication: String!
+    department: String!
+    province: String!
+    district: String
+  ): [MedicationsPrice!]!
+
+  getSearchResults(medication: String!): SearchResults!
+  getMedicationsFromFamily(family: String!): String
+}

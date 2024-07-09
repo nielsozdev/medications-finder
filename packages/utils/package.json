@@ -1,0 +1,19 @@
+{
+  "name": "@noz/utils",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "puede contener funciones y módulos que son específicos para la extracción de datos en sí. Por ejemplo, funciones que hacen solicitudes web y extraen datos de HTML o JSON, o módulos que manejan la autenticación y el control de sesiones en sitios web.",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@noz/eslint-config": "workspace:*",
+    "@noz/tsconfig": "workspace:*",
+    "@types/node": "20.14.2",
+    "typescript": "5.4.5"
+  },
+  "dependencies": {
+    "chalk": "5.3.0",
+    "typescript": "5.4.5"
+  }
+}

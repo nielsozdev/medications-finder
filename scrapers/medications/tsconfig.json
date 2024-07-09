@@ -1,0 +1,58 @@
+{
+  "extends": "@noz/tsconfig/scrapers.json",
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "paths": {
+      "~/*": [
+        "src/*"
+      ],
+      "@noz/helpers": [
+        "../../packages/helpers"
+      ],
+      "@noz/scrapers-utils": [
+        "../../packages/scrapers-utils"
+      ],
+      "@noz/scrapers-helpers": [
+        "../../packages/scrapers-helpers"
+      ],
+      "@noz/medications-core": [
+        "../../shared/medications-core"
+      ],
+      "@noz/utils": [
+        "../../packages/utils"
+      ],
+      "@noz/prisma": [
+        "../../packages/prisma"
+      ]
+    }
+  },
+  "include": [
+    "**/*",
+    "src/data/**/**.json"
+  ],
+  "exclude": [
+    "extractData/",
+  ],
+  "references": [
+    {
+      "path": "../../packages/helpers"
+    },
+    {
+      "path": "../../packages/scrapers-helpers"
+    },
+    {
+      "path": "../../packages/scrapers-utils"
+    },
+    {
+      "path": "../../shared/medications-core"
+    },
+    {
+      "path": "../../packages/utils"
+    },
+    {
+      "path": "../../packages/prisma"
+    }
+  ]
+}

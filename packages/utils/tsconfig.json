@@ -1,0 +1,16 @@
+{
+  "extends": "@noz/tsconfig/node.json",
+  "compilerOptions": {
+    "moduleResolution": "NodeNext",
+    "composite": true,
+    "outDir": "dist",
+  },
+  "include": [
+    "**/*.ts",
+    "index.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

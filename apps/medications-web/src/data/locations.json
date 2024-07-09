@@ -1,0 +1,291 @@
+[
+  {
+    "id": "5cd7368176e519fd5ccff4d61db909e869586b350e02f9ca13ff19de8e75c548",
+    "name": "JUNIN",
+    "provinces": [
+      {
+        "id": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b",
+        "name": "HUANCAYO",
+        "idDepartment": "5cd7368176e519fd5ccff4d61db909e869586b350e02f9ca13ff19de8e75c548",
+        "districts": [
+          {
+            "id": "9a0dac947ac4ef07ace8a13b432d97ec5e2a36cd607df487d94c3274f9655617",
+            "name": "EL TAMBO",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          },
+          {
+            "id": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b",
+            "name": "HUANCAYO",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          },
+          {
+            "id": "167a37050909bd70244b06cfea3dcd6be090316aa917809f262c704a193d7130",
+            "name": "SAPALLANGA",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          },
+          {
+            "id": "0dc9db360816be33ac8c4b8f73b337efd3d5ae3c38f864cc78eddc9e94521587",
+            "name": "CHILCA",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          },
+          {
+            "id": "53b96a090ad1d899c47f4852ae8ad6a74c1e7145f60dd79f339f0d57d26e490c",
+            "name": "HUAYUCACHI",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          },
+          {
+            "id": "cb15801f40dbb8a85360503fa71f7921d4af126229c47e7f19fee797beece159",
+            "name": "SAN JERONIMO DE TUNAN",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          },
+          {
+            "id": "9ed25b93f349ac28f000b5666ab146a850bea1abd220a67b304760ec18d110ef",
+            "name": "SAÑO",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          },
+          {
+            "id": "898f92f62eb7d66b90eb3b966555e15243bf68a31b55f51fac434566f5745559",
+            "name": "HUANCAN",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          },
+          {
+            "id": "06184c0f04821e679aaf5809b5b81519975cf24e37c2d9c48ff7109793035f32",
+            "name": "SAN AGUSTIN",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          },
+          {
+            "id": "d6a01f4ff2668361c6529428a05c864ce150627481bb879b9c5be0ded9c3699e",
+            "name": "PUCARA",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          },
+          {
+            "id": "fb7a8177bb84749887f744d4db9edb75fc1da0c6340f287baf1c9be8a60d9b0a",
+            "name": "HUALHUAS",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          },
+          {
+            "id": "f7dc16b44ec6ae1590a7851a4b3a6e165568cb84a72a9c0a72d2a17af20443bb",
+            "name": "PILCOMAYO",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          },
+          {
+            "id": "5603fbea83c12483c30b754f7df192e202d8cd1ea47ef065b9ef956ea96072d3",
+            "name": "VIQUES",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          },
+          {
+            "id": "47925068be4eae460d230bac63b0b72e8584722255c5a64c82807fbaac6b4012",
+            "name": "CHUPURO",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          },
+          {
+            "id": "af058c9d7f7b2b17413ced21e2a7ea28935f272478b74277fcac128b310be713",
+            "name": "SICAYA",
+            "idProvince": "1118619b60e8ed25969750630d9e2b19812daf94ec36a8d543f96f7ce560c99b"
+          }
+        ]
+      },
+      {
+        "id": "5cd7368176e519fd5ccff4d61db909e869586b350e02f9ca13ff19de8e75c548",
+        "name": "JUNIN",
+        "idDepartment": "5cd7368176e519fd5ccff4d61db909e869586b350e02f9ca13ff19de8e75c548",
+        "districts": [
+          {
+            "id": "5cd7368176e519fd5ccff4d61db909e869586b350e02f9ca13ff19de8e75c548",
+            "name": "JUNIN",
+            "idProvince": "5cd7368176e519fd5ccff4d61db909e869586b350e02f9ca13ff19de8e75c548"
+          },
+          {
+            "id": "38d81e5f40061c89636f631a79d068ffc9f4879b5a802d0644b88799eca33d14",
+            "name": "CARHUAMAYO",
+            "idProvince": "5cd7368176e519fd5ccff4d61db909e869586b350e02f9ca13ff19de8e75c548"
+          }
+        ]
+      },
+      {
+        "id": "33cee38644211fc92c79fe967efc35133c76fa9317e940f3e1581919e943e96c",
+        "name": "CHANCHAMAYO",
+        "idDepartment": "5cd7368176e519fd5ccff4d61db909e869586b350e02f9ca13ff19de8e75c548",
+        "districts": [
+          {
+            "id": "a7d444846c3f557ee289faef572de05fd6d874992cbb0456df34429916f04c58",
+            "name": "SAN RAMON",
+            "idProvince": "33cee38644211fc92c79fe967efc35133c76fa9317e940f3e1581919e943e96c"
+          },
+          {
+            "id": "1d0ca7b922e2be22b058fd1800440db754468bfa810ee31b77fe58e962509a80",
+            "name": "PERENE",
+            "idProvince": "33cee38644211fc92c79fe967efc35133c76fa9317e940f3e1581919e943e96c"
+          },
+          {
+            "id": "3efaed737295286158be637185a2092db841a0957123cafe406512172968ac33",
+            "name": "PICHANAQUI",
+            "idProvince": "33cee38644211fc92c79fe967efc35133c76fa9317e940f3e1581919e943e96c"
+          },
+          {
+            "id": "3bffa101f3c633e0471b9d31b42eb274400a199a7b740e390f950f7d55ce4330",
+            "name": "SAN LUIS DE SHUARO",
+            "idProvince": "33cee38644211fc92c79fe967efc35133c76fa9317e940f3e1581919e943e96c"
+          },
+          {
+            "id": "33cee38644211fc92c79fe967efc35133c76fa9317e940f3e1581919e943e96c",
+            "name": "CHANCHAMAYO",
+            "idProvince": "33cee38644211fc92c79fe967efc35133c76fa9317e940f3e1581919e943e96c"
+          }
+        ]
+      },
+      {
+        "id": "31cf1510619432782327f91cb88dba49ff615341c7e615d4061ba57ff4cf080a",
+        "name": "SATIPO",
+        "idDepartment": "5cd7368176e519fd5ccff4d61db909e869586b350e02f9ca13ff19de8e75c548",
+        "districts": [
+          {
+            "id": "5e27825d68858a21ff1415aed4bcfc407b44d6114195360256cca2e309f6502c",
+            "name": "PANGOA",
+            "idProvince": "31cf1510619432782327f91cb88dba49ff615341c7e615d4061ba57ff4cf080a"
+          },
+          {
+            "id": "31cf1510619432782327f91cb88dba49ff615341c7e615d4061ba57ff4cf080a",
+            "name": "SATIPO",
+            "idProvince": "31cf1510619432782327f91cb88dba49ff615341c7e615d4061ba57ff4cf080a"
+          },
+          {
+            "id": "c498ae627df3f00950e3879b75ec175f6a8fe8d2c8e4f926c67a3fb3e89fe956",
+            "name": "RIO NEGRO",
+            "idProvince": "31cf1510619432782327f91cb88dba49ff615341c7e615d4061ba57ff4cf080a"
+          },
+          {
+            "id": "f5acaa7626f21724896321de0ba2ce6dbb6aa83a89769917e995a83c84438dad",
+            "name": "MAZAMARI",
+            "idProvince": "31cf1510619432782327f91cb88dba49ff615341c7e615d4061ba57ff4cf080a"
+          }
+        ]
+      },
+      {
+        "id": "7a0f6e1e2eab144e96ed0c32634cf08bc0015359a63cdd1a6959d1a4d8f9147f",
+        "name": "CONCEPCION",
+        "idDepartment": "5cd7368176e519fd5ccff4d61db909e869586b350e02f9ca13ff19de8e75c548",
+        "districts": [
+          {
+            "id": "7a0f6e1e2eab144e96ed0c32634cf08bc0015359a63cdd1a6959d1a4d8f9147f",
+            "name": "CONCEPCION",
+            "idProvince": "7a0f6e1e2eab144e96ed0c32634cf08bc0015359a63cdd1a6959d1a4d8f9147f"
+          },
+          {
+            "id": "a424bcd3ced5f52d05ebdd26bed603ddac3132b3627f0b1dfe3246d0e010d27a",
+            "name": "MANZANARES",
+            "idProvince": "7a0f6e1e2eab144e96ed0c32634cf08bc0015359a63cdd1a6959d1a4d8f9147f"
+          },
+          {
+            "id": "375b8779622895153083bdfb84af9f29825b243a2cece67c6b5ee39434beeb2f",
+            "name": "MATAHUASI",
+            "idProvince": "7a0f6e1e2eab144e96ed0c32634cf08bc0015359a63cdd1a6959d1a4d8f9147f"
+          }
+        ]
+      },
+      {
+        "id": "f34b18390599936ae8529fcedb143fb82535bcfe6c7534b071898826c88931bf",
+        "name": "JAUJA",
+        "idDepartment": "5cd7368176e519fd5ccff4d61db909e869586b350e02f9ca13ff19de8e75c548",
+        "districts": [
+          {
+            "id": "f34b18390599936ae8529fcedb143fb82535bcfe6c7534b071898826c88931bf",
+            "name": "JAUJA",
+            "idProvince": "f34b18390599936ae8529fcedb143fb82535bcfe6c7534b071898826c88931bf"
+          },
+          {
+            "id": "b98da5e29f2ce01c38c67e3e0ca92ae6cecb0235ab85f02bbea1c330dc95afe1",
+            "name": "YAUYOS",
+            "idProvince": "f34b18390599936ae8529fcedb143fb82535bcfe6c7534b071898826c88931bf"
+          },
+          {
+            "id": "2a782141bb6f1d2be8b9ac5a52a6dee5e92c3d78539112ac1ffa85bc4d2b1de2",
+            "name": "APATA",
+            "idProvince": "f34b18390599936ae8529fcedb143fb82535bcfe6c7534b071898826c88931bf"
+          },
+          {
+            "id": "09d977a93678805b80d4e1b303fda58b6a218cc0b150440b56b3a249cb602a80",
+            "name": "ACOLLA",
+            "idProvince": "f34b18390599936ae8529fcedb143fb82535bcfe6c7534b071898826c88931bf"
+          }
+        ]
+      },
+      {
+        "id": "e844df6812051f612ceb8542ec572fe9e7822c078c3b9c8b04475f8f3131db5a",
+        "name": "CHUPACA",
+        "idDepartment": "5cd7368176e519fd5ccff4d61db909e869586b350e02f9ca13ff19de8e75c548",
+        "districts": [
+          {
+            "id": "e844df6812051f612ceb8542ec572fe9e7822c078c3b9c8b04475f8f3131db5a",
+            "name": "CHUPACA",
+            "idProvince": "e844df6812051f612ceb8542ec572fe9e7822c078c3b9c8b04475f8f3131db5a"
+          },
+          {
+            "id": "4a2521cfe4e12d835d28cdead6b7aff7c27e5dec235a24d6b6f499b83d21ee64",
+            "name": "HUAMANCACA CHICO",
+            "idProvince": "e844df6812051f612ceb8542ec572fe9e7822c078c3b9c8b04475f8f3131db5a"
+          },
+          {
+            "id": "b7572b0c66e97682e31f0eca7cad7886955d036d2ddfb0032b8a341f65bdaa0a",
+            "name": "AHUAC",
+            "idProvince": "e844df6812051f612ceb8542ec572fe9e7822c078c3b9c8b04475f8f3131db5a"
+          },
+          {
+            "id": "9ffeebe897e874a93e253f931145a3ba1f14466e9c82062c5751967cbdf45ded",
+            "name": "CHONGOS BAJO",
+            "idProvince": "e844df6812051f612ceb8542ec572fe9e7822c078c3b9c8b04475f8f3131db5a"
+          }
+        ]
+      },
+      {
+        "id": "0c939ef0c1a1cf6424109aa7e3d92d5f386d1555693e79a36e9ec34aca362f7c",
+        "name": "TARMA",
+        "idDepartment": "5cd7368176e519fd5ccff4d61db909e869586b350e02f9ca13ff19de8e75c548",
+        "districts": [
+          {
+            "id": "0c939ef0c1a1cf6424109aa7e3d92d5f386d1555693e79a36e9ec34aca362f7c",
+            "name": "TARMA",
+            "idProvince": "0c939ef0c1a1cf6424109aa7e3d92d5f386d1555693e79a36e9ec34aca362f7c"
+          },
+          {
+            "id": "3fdc2180a20875cf37e3a532e2724c363d68873bfbfa6f871d31ca1b08a04e07",
+            "name": "HUASAHUASI",
+            "idProvince": "0c939ef0c1a1cf6424109aa7e3d92d5f386d1555693e79a36e9ec34aca362f7c"
+          },
+          {
+            "id": "616c5b5e4aeb10cbbdc396e97ad84d4f13f42813c2fd3f0b1991cebcc9aaa64f",
+            "name": "ACOBAMBA",
+            "idProvince": "0c939ef0c1a1cf6424109aa7e3d92d5f386d1555693e79a36e9ec34aca362f7c"
+          },
+          {
+            "id": "a31f4daf2d1db6ba2facfe3fe490b6545ac7ebdc1dd942bbbcbea8d87d935078",
+            "name": "PALCAMAYO",
+            "idProvince": "0c939ef0c1a1cf6424109aa7e3d92d5f386d1555693e79a36e9ec34aca362f7c"
+          }
+        ]
+      },
+      {
+        "id": "480cf0c3d8acf605d6e83814833cb377e490bb7790545854c181621ee19c87e3",
+        "name": "YAULI",
+        "idDepartment": "5cd7368176e519fd5ccff4d61db909e869586b350e02f9ca13ff19de8e75c548",
+        "districts": [
+          {
+            "id": "786a96ac2e0d4469932e195d048613e68414c4e31806f31f2369ae09482c6c5d",
+            "name": "SANTA ROSA DE SACCO",
+            "idProvince": "480cf0c3d8acf605d6e83814833cb377e490bb7790545854c181621ee19c87e3"
+          },
+          {
+            "id": "78590b6809b2873616976b72df37b1da1a643bac305d051bf724b73c920df0fc",
+            "name": "LA OROYA",
+            "idProvince": "480cf0c3d8acf605d6e83814833cb377e490bb7790545854c181621ee19c87e3"
+          },
+          {
+            "id": "480cf0c3d8acf605d6e83814833cb377e490bb7790545854c181621ee19c87e3",
+            "name": "YAULI",
+            "idProvince": "480cf0c3d8acf605d6e83814833cb377e490bb7790545854c181621ee19c87e3"
+          }
+        ]
+      }
+    ]
+  }
+]

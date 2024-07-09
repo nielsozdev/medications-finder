@@ -1,0 +1,22 @@
+{
+  "name": "@noz/medications-core",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "codegen": "graphql-codegen --config codegen.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@noz/eslint-config": "workspace:*",
+    "@noz/tsconfig": "workspace:*",
+    "@parcel/watcher": "2.4.1",
+    "@types/node": "20.14.2",
+    "graphql": "16.8.1",
+    "mongoose": "8.4.1",
+    "typescript": "5.4.5"
+  }
+}

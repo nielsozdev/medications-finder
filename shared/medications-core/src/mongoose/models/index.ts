@@ -1,0 +1,5 @@
+export * from './establishment.model'
+export * from './manufacturer.model'
+export * from './subFamily.model'
+export * from './family.model'
+export * from './price.model'

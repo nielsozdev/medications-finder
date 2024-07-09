@@ -1,0 +1,28 @@
+{
+  "display": "Node",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": [
+      "ES2020",
+      "DOM"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules/**",
+    "dist",
+    "build",
+    "public",
+    ".next",
+    "**/.next/**",
+    "ideas",
+    "**/ideas/**"
+  ],
+  "include": [
+    "src",
+    "**/*.ts"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "extends": "@noz/tsconfig/scrapers.json",
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "paths": {
+      "~/*": [
+        "src/*"
+      ],
+      "~~/*": [
+        "public/*"
+      ],
+      "@noz/utils": [
+        "../../packages/utils"
+      ],
+      "@noz/helpers": [
+        "../../packages/helpers"
+      ],
+      "@noz/scrapers-utils": [
+        "../../packages/scrapers-utils"
+      ],
+      "@noz/scrapers-helpers": [
+        "../../packages/scrapers-helpers"
+      ],
+    },
+  },
+  "include": [
+    "**/*",
+    "**/*.json",
+  ],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/**",
+    "dist",
+  ],
+  "references": [
+    {
+      "path": "../../packages/utils"
+    },
+    {
+      "path": "../../packages/helpers"
+    },
+    {
+      "path": "../../packages/scrapers-utils"
+    },
+    {
+      "path": "../../packages/scrapers-helpers"
+    }
+  ]
+}

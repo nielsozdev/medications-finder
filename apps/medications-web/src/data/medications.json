@@ -1,0 +1,902 @@
+[
+  {
+    "id": "143f08e80e84c6b3bc6a66c7bf11b706834e8227b9fe8f6655563bd8a082c81c",
+    "name": "ACETAZOLAMIDA",
+    "concentration": "250 mg",
+    "fractions": 100
+  },
+  {
+    "id": "c252fa24ffb63f2481e7e28f54204521bcba5496cefb54f26fc62d14d1f4b381",
+    "name": "ACICLOVIR",
+    "concentration": "5 %",
+    "fractions": 1
+  },
+  {
+    "id": "c448b656aa4cbcbf235840112061948294981babd1dafbdc9a78819e73844938",
+    "name": "ACICLOVIR SODICO",
+    "concentration": "250 mg",
+    "fractions": 10
+  },
+  {
+    "id": "b0d7ed5938dab281175c9388b240f41c57d89452fdb1f8b0632b4617e740750a",
+    "name": "ACIDO ACETILSALICILICO",
+    "concentration": "500 mg",
+    "fractions": 100
+  },
+  {
+    "id": "4cfe28d6673a18b800adcd56129082009108866a62559a6f31e96f58ace5688f",
+    "name": "ALENDRONATO SODICO TRIHIDRATO",
+    "concentration": "70 mg",
+    "fractions": 100
+  },
+  {
+    "id": "db63b7a89f760e2d4ef3b4664ba8f10add041eea1eb9898811c2fc8d3cd728d7",
+    "name": "ACIDO ALENDRONICO",
+    "concentration": "70 mg",
+    "fractions": 4
+  },
+  {
+    "id": "ad2941b0b22e120635597e2251358841030bcf1fac8b939dfc1fbc64238ca133",
+    "name": "ACIDO FOLICO",
+    "concentration": "0.5 mg",
+    "fractions": 30
+  },
+  {
+    "id": "b685bd5c8094416e3a8ab08b4c303cc586daefb6af4d9a04cf5d1fb481a62912",
+    "name": "ACIDO FUSIDICO",
+    "concentration": "2%",
+    "fractions": 1
+  },
+  {
+    "id": "25c2e3057c36e5730f7fef281ed26d6dcb0d06ef3ee1ae990da3df7bf7422834",
+    "name": "FUSIDATO SODICO",
+    "concentration": "2 %",
+    "fractions": 1
+  },
+  {
+    "id": "018cdb94ea493e4584826406d109af92b28ecb7fad25da2041a377778dca35d6",
+    "name": "ACIDO TRANEXAMICO",
+    "concentration": "1 g/ 10 mL",
+    "fractions": 1
+  },
+  {
+    "id": "cc9b117bb524fdfd02dbcbebe26c71267f831840bbd52c9a77e9e2b8ea287e90",
+    "name": "VALPROATO SODICO",
+    "concentration": "250 mg/5 mL",
+    "fractions": 1
+  },
+  {
+    "id": "36355134ffdfe765fe6cb40eef8c9ac5ec2e9e85b92d39bc416813ac478c8fd4",
+    "name": "ACIDO VALPROICO",
+    "concentration": "250 mg/ 5 mL",
+    "fractions": 1
+  },
+  {
+    "id": "e260dce0c298810395d239ecd9d18804cd9859d0af2e5e0e127a21abf3a9f2c3",
+    "name": "ACIDO ZOLEDRONICO MONOHIDRATADO",
+    "concentration": "4 mg",
+    "fractions": 1
+  },
+  {
+    "id": "785f488b869d7d378d54cfd1252d9bbf847cdd0c346aa69e58cb22ad1859fd1b",
+    "name": "ACIDO ZOLEDRONICO MONOHIDRATO",
+    "concentration": "5 mg /100 mL",
+    "fractions": 1
+  },
+  {
+    "id": "cf2e3c0674c740722ac24a4c651771ba62c13a68d63fade8e73702a2b2a65851",
+    "name": "ALUMINIO HIDROXIDO + MAGNESIO HIDROXIDO + SIMETICONA",
+    "concentration": "",
+    "fractions": 1
+  },
+  {
+    "id": "a6160ee420d8a89a29b3acea6cc4e8484f1d4348dfecfd7b8c86cece140811c5",
+    "name": "ALUMINIO HIDROXIDO + HIDROXIDO DE MAGNESIO + SIMETICONA",
+    "concentration": "",
+    "fractions": 1
+  },
+  {
+    "id": "6b739fe60d48a70e0861e38340759062bf47d659908815e85e4f6f3e8ad09b8c",
+    "name": "HIDROXIDO DE MAGNESIO + SIMETICONA + HIDROXIDO DE ALUMINIO",
+    "concentration": "",
+    "fractions": 1
+  },
+  {
+    "id": "f199c27432f43faadae1d54a3a9822c6a40a6795bcfefd5723a89e238436b80e",
+    "name": "ALBENDAZOL",
+    "concentration": "100 mg/ 5 mL",
+    "fractions": 1
+  },
+  {
+    "id": "10bbd153b378c41622d62b7567de1e276e0b6a904a19f31044f3c254d83ee464",
+    "name": "AZITROMICINA",
+    "concentration": "200 mg/ 5 mL",
+    "fractions": 1
+  },
+  {
+    "id": "b3261d841b735469905c2b2dab21166eabda3f783bfcd35b43f9eeba773335c6",
+    "name": "ALBUMINA HUMANA",
+    "concentration": "20 %",
+    "fractions": 1
+  },
+  {
+    "id": "bcd2ed9d748778e3ad48f9ea1df11e221b2c1eb3094f69c708bfea1f995583af",
+    "name": "ALOPURINOL",
+    "concentration": "300 mg",
+    "fractions": 200
+  },
+  {
+    "id": "997ccf5cd437c1013232659ac52c1b29f1121acaadb194442d6b8c6d6991543c",
+    "name": "ALPRAZOLAM",
+    "concentration": "0.5 mg",
+    "fractions": 200
+  },
+  {
+    "id": "bf044cd7bce6b8fc5e73184b33b0bef9c2e352e88b30a341f44e38b8d780e11d",
+    "name": "AMFOTERICINA B",
+    "concentration": "50 mg",
+    "fractions": 1
+  },
+  {
+    "id": "a2da2d6dc7d414c567994d9c0b5511d44969dba17b96ab9c8cd638ec883b25e5",
+    "name": "AMITRIPTILINA CLORHIDRATO",
+    "concentration": "25 mg",
+    "fractions": 300
+  },
+  {
+    "id": "4725d96c16080777327542c8b532c3ddbfe5fd004223801f198698e04f27b800",
+    "name": "AMINOFILINA",
+    "concentration": "250 mg /10 mL",
+    "fractions": 25
+  },
+  {
+    "id": "466141dbe36fc001d3ce430b28e4d41b9b1594986fe900d8fff8ba501b287229",
+    "name": "AMIODARONA CLORHIDRATO",
+    "concentration": "200 mg",
+    "fractions": 500
+  },
+  {
+    "id": "d9316cf3740ed0bc36745223b134d081e9309f88e903954883f42189eb010b60",
+    "name": "AMLODIPINO BESILATO",
+    "concentration": "5 mg",
+    "fractions": 10
+  },
+  {
+    "id": "71f24427fde90572239932c1a044e4b35b9779d6a77a64796393a979814b6d8d",
+    "name": "AMLODIPINO",
+    "concentration": "5 mg",
+    "fractions": 100
+  },
+  {
+    "id": "df3d838188036c1aec5e295275180ea0d9bf2921f037f3ee1131247ceed35a0b",
+    "name": "AMOXICILINA TRIHIDRATO",
+    "concentration": "250 mg/5 mL",
+    "fractions": 1
+  },
+  {
+    "id": "49f6ea4a8a89ba76edd93c0c4346041ef23564b43aa9086a3644efcf476d0d54",
+    "name": "KANAMICINA A SULFATO",
+    "concentration": "500 mg/2 mL",
+    "fractions": 25
+  },
+  {
+    "id": "c45dd4c77b6b99d4655259d1556c4bbf22a077f50a2787a513de76b9fcae43b2",
+    "name": "AMIKACINA SULFATO",
+    "concentration": "500 mg/ 2 mL",
+    "fractions": 10
+  },
+  {
+    "id": "8e6d369767e0aaf5b3998560b4ee6c16279e28552c6be7d3a5662fb8cb660090",
+    "name": "AMIKACINA",
+    "concentration": "500 mg/ 2 mL",
+    "fractions": 10
+  },
+  {
+    "id": "d67d7339fe546cfcda3484bf503cdd71a93578ba13016ca473ba7f81854405b8",
+    "name": "AMOXICILINA",
+    "concentration": "250 mg/ 5 mL",
+    "fractions": 1
+  },
+  {
+    "id": "77720ab8db1be6d45c7dc9f7c85efcaded8ed7f72683195e708ddc34ce4a11c8",
+    "name": "AMOXICILINA TRIHIDRATO + CLAVULANATO POTASICO",
+    "concentration": "500 mg + 125 mg",
+    "fractions": 10
+  },
+  {
+    "id": "518488b4992686f03a0f72de2b830088354ba079a1d918cca824211f201b832c",
+    "name": "AMOXICILINA + CLAVULANATO POTASICO",
+    "concentration": "500 mg + 125 mg",
+    "fractions": 14
+  },
+  {
+    "id": "b7a013b8935ff6f313a1e76a714e8eb29f1a05961eb2517616950e01f6584486",
+    "name": "ACIDO CLAVULANICO + AMOXICILINA TRIHIDRATO",
+    "concentration": "500 mg + 125 mg",
+    "fractions": 10
+  },
+  {
+    "id": "7c6063722fe53f7603dd8e03239e5e750c2226130c18859aa8683ec213ce64e6",
+    "name": "ACIDO CLAVULANICO + AMOXICILINA",
+    "concentration": "500 mg + 125 mg",
+    "fractions": 10
+  },
+  {
+    "id": "327ada970abe281c242b1afb02d91348b6b04ff3cb6657b6ee920b815c6f43ac",
+    "name": "ACIDO CLAVULANICO",
+    "concentration": "500 mg + 125 mg",
+    "fractions": 10
+  },
+  {
+    "id": "99d1ac56ed046326028eaed3e650423f72de736767fc32d1129288e4e83363ba",
+    "name": "AMBROXOL CLORHIDRATO + AMOXICILINA TRIHIDRATO",
+    "concentration": "250 mg + 15 mg/ 5 mL",
+    "fractions": 1
+  },
+  {
+    "id": "c5ffc4834ae51188763e69da3c147f1f43061b10d08e29ab178679267836aa48",
+    "name": "AMOXICILINA TRIHIDRATO + BROMHEXINA CLORHIDRATO",
+    "concentration": "250 mg + 4 mg/ 5 mL",
+    "fractions": 1
+  },
+  {
+    "id": "4f6cd7c1ecdfd58bd8bdf95c9ebb5caa17cb10acadc3e6fab71691f34ceab01b",
+    "name": "AMOXICILINA TRIHIDRATO + BROMHEXINA",
+    "concentration": "500 mg + 8 mg",
+    "fractions": 50
+  },
+  {
+    "id": "5ecbe552b9a4108852d36b0897c11d51c68cb31e66a270c77f285d7943cd4a71",
+    "name": "AMOXICILINA + BROMHEXINA CLORHIDRATO",
+    "concentration": "500 mg + 8 mg",
+    "fractions": 80
+  },
+  {
+    "id": "8b9fcd60a90d1833d0446898edbb65e4baa15f4145fb43d34018b8f2c5122082",
+    "name": "AMPICILINA SODICA",
+    "concentration": "1 g",
+    "fractions": 50
+  },
+  {
+    "id": "502fbf11619da99775b930dfa5095ccdb684fad06371e3ce68a1174bb50be382",
+    "name": "AMPICILINA",
+    "concentration": "1 g",
+    "fractions": 50
+  },
+  {
+    "id": "66973f2b254cf1a562fa217c035dd3a40dbc1440567a02d742645ecd38e26cd8",
+    "name": "AMPICILINA TRIHIDRATO",
+    "concentration": "500 mg",
+    "fractions": 100
+  },
+  {
+    "id": "10cc691e56748801903e809e56c5b039ec322a7298f7c55462e7a2e7715f4f76",
+    "name": "AMPICILINA SODICA + SULBACTAM SODICO",
+    "concentration": "1 g + 0.5 g",
+    "fractions": 10
+  },
+  {
+    "id": "eaa656c805e8bf3d72e31e6ffda7987d2a0cf7384f5c7b7f8d42b2b4bacef425",
+    "name": "ATORVASTATINA DE CALCIO TRIHIDRATO",
+    "concentration": "20 mg",
+    "fractions": 100
+  },
+  {
+    "id": "76bb472d0810ab0ba5de42b3c6838673ce5f14ab7872e17093fe296727499d55",
+    "name": "ATORVASTATINA DE CALCIO",
+    "concentration": "40 mg",
+    "fractions": 100
+  },
+  {
+    "id": "35c808577854ed963ffc72aa2e9989cc0041cb7fa27209d35a566693dc97e45d",
+    "name": "ATORVASTATINA",
+    "concentration": "40 mg",
+    "fractions": 30
+  },
+  {
+    "id": "62440b3265295c9b72c986ac3cf08e0f6bc91a408291fdff1f8e6e8a475e5b74",
+    "name": "ATROPINA SULFATO",
+    "concentration": "1 mg/ mL",
+    "fractions": 10
+  },
+  {
+    "id": "297d27a707417ae1a5f252cc6ab5c056b6860c745763fb3e1cbc6211d0034cf5",
+    "name": "AZATIOPRINA",
+    "concentration": "50 mg",
+    "fractions": 100
+  },
+  {
+    "id": "8e745f75a90fa3795834fa3566a08e6b7feaeab2dbbe4b81bd5c1074c57d65ad",
+    "name": "AZITROMICINA DIHIDRATO",
+    "concentration": "200 mg/ 5 mL",
+    "fractions": 1
+  },
+  {
+    "id": "f3d91512f660e7312e49aad112f5f4d10589f7a885b044f34635cb84220b6eba",
+    "name": "BACLOFENO",
+    "concentration": "10 mg",
+    "fractions": 100
+  },
+  {
+    "id": "2f18f2a06ff8c9ca00f511f2a4d3b26fa221a5d3b597082939b5cf36b5f7141a",
+    "name": "BETAMETASONA FOSFATO DISODICO",
+    "concentration": "4 mg/mL",
+    "fractions": 1000
+  },
+  {
+    "id": "bcc6cd363a66ad21eb9d23307567e8c1c131d7addc9edd0150845c656be646d4",
+    "name": "BETAMETASONA FOSFATO SODICO",
+    "concentration": "4 mg/ mL",
+    "fractions": 10
+  },
+  {
+    "id": "95c4c6daf10c256e892a29095fbb4099927ce2d5ce6caa2a56feec3f55e26c4c",
+    "name": "BETAMETASONA DIPROPIONATO",
+    "concentration": "0.05%",
+    "fractions": 1
+  },
+  {
+    "id": "d96befb80d4d63aa0c286ccfda7e05173758dccf52b9beb30034a05fd6696494",
+    "name": "BISACODILO",
+    "concentration": "5 mg",
+    "fractions": 100
+  },
+  {
+    "id": "e6e0fa96485658a48540f57857ad64fdb9cbde2b54faaaa89534bad6865f7f86",
+    "name": "BROMURO DE IPRATROPIO",
+    "concentration": "20 mcg/dosis",
+    "fractions": 1
+  },
+  {
+    "id": "f8d3d263378241c56013476d151c061861e2dd953e5b6b29fe8652e8443f6137",
+    "name": "BROMURO DE ROCURONIO",
+    "concentration": "50 mg/ 5 mL",
+    "fractions": 25
+  },
+  {
+    "id": "9a7df18e4076dd7da81db4ba299b0517707a079f1b957204b22980cdec0b601f",
+    "name": "BROMURO DE VECURONIO",
+    "concentration": "4 mg",
+    "fractions": 1
+  },
+  {
+    "id": "4f85ad99564b517f1074b873c710c9d660d72c45c5db4380258165aacf77912f",
+    "name": "BUDESONIDA",
+    "concentration": "200 mcg/ dosis",
+    "fractions": 1
+  },
+  {
+    "id": "63383f3bcacb6e3731f20d8ae6a26485910bda6ef8c2a8dd3d9f44eb85e6ec39",
+    "name": "BUPIVACAINA CLORHIDRATO",
+    "concentration": "0.5 %",
+    "fractions": 5
+  },
+  {
+    "id": "11a6b007699d383c8fff6851869998e463be3abefd72ba3551dc38279087731b",
+    "name": "BUPIVACAINA CLORHIDRATO + DEXTROSA MONOHIDRATO",
+    "concentration": "0.5 %",
+    "fractions": 1
+  },
+  {
+    "id": "73f5b11c57a12663201373e73cbdb5edfafd77a17b7038c15ca58c889d164ac1",
+    "name": "CALCITRIOL",
+    "concentration": "0.25 µg",
+    "fractions": 100
+  },
+  {
+    "id": "abc92178d754c1a7f3ef018dc0a3f2c04c2e9719b51b7c78b19e03447d16310b",
+    "name": "CAPTOPRIL",
+    "concentration": "25 mg",
+    "fractions": 100
+  },
+  {
+    "id": "3e5ecfda8be7b62c479ba24459f04eeb9b7f927a1cdb94633396b214b6c2ea0a",
+    "name": "CARBAMAZEPINA",
+    "concentration": "200 mg",
+    "fractions": 100
+  },
+  {
+    "id": "43db0a75a230044131e8ffbd2ef1c2329918e3384d6076016fab45253a03d701",
+    "name": "CARBIDOPA MONOHIDRATO + LEVODOPA",
+    "concentration": "25 mg + 250 mg",
+    "fractions": 200
+  },
+  {
+    "id": "1522d4009fbd189edaf62c8607b702868305a77ffbb14857bd0870de6d4e3c9f",
+    "name": "CARBIDOPA + LEVODOPA",
+    "concentration": "25 mg + 250 mg",
+    "fractions": 30
+  },
+  {
+    "id": "fcee671de9ac628d345acc71cb9fa495c8529f16604409584a90bc386dfcabb5",
+    "name": "CARBONATO DE CALCIO",
+    "concentration": "1250 mg",
+    "fractions": 300
+  },
+  {
+    "id": "d94861a06cc07bb1081beae84722d796aaa1ea9386b0ed6982ba6870ee08069d",
+    "name": "LITIO CARBONATO",
+    "concentration": "300 mg",
+    "fractions": 100
+  },
+  {
+    "id": "75328d77ea29cda405688796a954b5c5037ded0fe483d648ca8bc60134444cc0",
+    "name": "CEFACLOR MONOHIDRATO",
+    "concentration": "500 mg",
+    "fractions": 10
+  },
+  {
+    "id": "43c8265890aa3f3b29133d4d4f1ef90fd6c98513c271bf99c42ec972554ccd51",
+    "name": "CEFAZOLINA SODICA",
+    "concentration": "1 g",
+    "fractions": 10
+  },
+  {
+    "id": "b3fe40d8308349d7339d48b05c9e1ffb6930d819484940af5fbabc2f4b50bb92",
+    "name": "CEFOTAXIMA SODICA",
+    "concentration": "0.5 g",
+    "fractions": 10
+  },
+  {
+    "id": "a4c4a171024ae8a5b22e06617181c857263deb3cbbc50f97eccb0f6330bc4b9b",
+    "name": "CEFTAZIDIMA PENTAHIDRATO",
+    "concentration": "1 g",
+    "fractions": 10
+  },
+  {
+    "id": "ec6f71c2a0cd31cfddbcf10802ac747b194d4311980b29e6b3f7c4e54fca42cd",
+    "name": "CEFTAZIDIMA",
+    "concentration": "1 g",
+    "fractions": 10
+  },
+  {
+    "id": "953e6c34b394babe54af909fbc6d766a716140a5e33d8c67bcf4f9a858c6874a",
+    "name": "CEFUROXIMA AXETIL",
+    "concentration": "500 mg",
+    "fractions": 30
+  },
+  {
+    "id": "33d448b1db947113d04d07d3ae9463157a2ef312f67a2c2d74aaa7fa800aabed",
+    "name": "CEFUROXIMA",
+    "concentration": "500 mg",
+    "fractions": 10
+  },
+  {
+    "id": "353151e3b87be63635e104054daf861f83289b783ace00fea876d51882382c38",
+    "name": "CEFUROXIMA SODICA",
+    "concentration": "750 mg",
+    "fractions": 1
+  },
+  {
+    "id": "0fab31662420c9b754b08703f778e88e772b5ce69bed72c374022ba78d23a3fe",
+    "name": "CICLOFOSFAMIDA MONOHIDRATO",
+    "concentration": "1 g",
+    "fractions": 1
+  },
+  {
+    "id": "04ee3a72be91e7eb6295096ed7b45c12794461d84f3da38ebcf64a857fadd3bf",
+    "name": "CICLOFOSFAMIDA",
+    "concentration": "1 g",
+    "fractions": 1
+  },
+  {
+    "id": "a4794d0265d570980c45ce115a1a8ed597fc732a41605e670961036828782bd4",
+    "name": "CIPROFLOXACINO CLORHIDRATO MONOHIDRATO",
+    "concentration": "0.3%",
+    "fractions": 1
+  },
+  {
+    "id": "a4215eb5a159f7ef6e4dae5d7382fa183529605be6e8e70245e191892feba05e",
+    "name": "CIPROFLOXACINO CLORHIDRATO",
+    "concentration": "0.3 %",
+    "fractions": 1
+  },
+  {
+    "id": "ca7b62eaa59a80b416c78e46af977442b9fa56f8d6ab8e00ddc353c2df99628f",
+    "name": "CIPROFLOXACINO",
+    "concentration": "0.3 %",
+    "fractions": 1
+  },
+  {
+    "id": "ddb82bb0edfce9387db856a4e13c26a626d5ba5b3824fa5436c89eb90594db95",
+    "name": "CITARABINA",
+    "concentration": "500 mg/5 mL",
+    "fractions": 1
+  },
+  {
+    "id": "e4b09a31fa6eb29771fafc729ee83df9092766c80dbe6f5c53a45222bc77b5ec",
+    "name": "CLARITROMICINA",
+    "concentration": "500 mg",
+    "fractions": 100
+  },
+  {
+    "id": "55ace08c4f6c000c7e6d067e88a684b5ddb891a6ef6493b8b5a2d0176ccb4a50",
+    "name": "CLINDAMICINA CLORHIDRATO",
+    "concentration": "300 mg",
+    "fractions": 100
+  },
+  {
+    "id": "ed3576c733daa200d332ac6e50642c7a38f0f89edce4e1f0f9eac6db64191323",
+    "name": "CLINDAMICINA",
+    "concentration": "300 mg",
+    "fractions": 100
+  },
+  {
+    "id": "089c2a6ae6b47c7cf31a2c0e4b86d3f857b0eb1f7a03bb384b86b90a151d312b",
+    "name": "CLINDAMICINA FOSFATO",
+    "concentration": "600 mg/4 mL",
+    "fractions": 25
+  },
+  {
+    "id": "2c4dd530211aea4a05a0362cecdb407a07611616e06a2d57633467bfc604470a",
+    "name": "CLOBAZAM",
+    "concentration": "10 mg",
+    "fractions": 100
+  },
+  {
+    "id": "fcffef0ae295b6dc08ddafa3d5d2d34d4e878bf7d66aff80bc025d6a7e50e377",
+    "name": "CLONAZEPAM",
+    "concentration": "0,5 mg",
+    "fractions": 30
+  },
+  {
+    "id": "f1178bfd3afe8a0a405ac459ca10a2afbd9cd024b5f79c2dd5b0bd1ad403c00b",
+    "name": "CLORFENAMINA MALEATO",
+    "concentration": "10 mg/ mL",
+    "fractions": 10
+  },
+  {
+    "id": "a77c6d90be839cd557dc8b873f1438bedb9d3119e54e84b4997b433671f85c55",
+    "name": "MALEATO DE CLORFENIRAMINA",
+    "concentration": "10 mg/mL",
+    "fractions": 100
+  },
+  {
+    "id": "8f0f19286382a2a58259cf24ca4fe9e29b8bb039132d645b0b467bd617c739ea",
+    "name": "CLOTRIMAZOL",
+    "concentration": "2 %",
+    "fractions": 1
+  },
+  {
+    "id": "c4ac77325202817b6862c6986ed3b9b08e2d201d18d1ff36dcc0be0b829ba5ed",
+    "name": "ESTRIOL",
+    "concentration": "0.1 %",
+    "fractions": 1
+  },
+  {
+    "id": "d85fc4776124f1ca68c85e7464bfe3cccae5c3237b1f1076249c64b425c4f4dd",
+    "name": "BETAMETASONA DIPROPIONATO + CLOTRIMAZOL + GENTAMICINA SULFATO",
+    "concentration": "1 g + 0.1 g + 0.05 g/100 g",
+    "fractions": 1
+  },
+  {
+    "id": "6484307906a3b92908643fcbd854e3e11449999a175077904e4e42e43e703ef2",
+    "name": "COLISTIMETATO DE SODIO",
+    "concentration": "150 mg",
+    "fractions": 1
+  },
+  {
+    "id": "590be38a2acdea77fe45da9715d99db39188d0e6f82f68c6d8156a325985517e",
+    "name": "PACLITAXEL",
+    "concentration": "100 mg/16.7 mL",
+    "fractions": 1
+  },
+  {
+    "id": "0179dafd4ea90fa5083778b1a633f3365fb17cedaea805aae0d480eb33d0c7a7",
+    "name": "DEXAMETASONA",
+    "concentration": "4 mg",
+    "fractions": 100
+  },
+  {
+    "id": "3fb0ae0ea1376ecef55c9db6112c372bfab8b96f09a4902ef099972065df5bc2",
+    "name": "DEXAMETASONA FOSFATO SODICO",
+    "concentration": "4 mg/ 1 mL",
+    "fractions": 100
+  },
+  {
+    "id": "667da73839aabcbf49cc8273b4d374d3b6f85abe801e884caa1933f44678c36c",
+    "name": "21-FOSFATO DISODICO DE DEXAMETASONA",
+    "concentration": "4 mg/2 mL",
+    "fractions": 100
+  },
+  {
+    "id": "4cdb088710f4563e96cb65b6e7cbb3b0220c6eea2169c7bdd65e63291c9f3a4a",
+    "name": "DEXAMETASONA FOSFATO",
+    "concentration": "4 mg/ 2 mL",
+    "fractions": 50
+  },
+  {
+    "id": "0338b9bb45fa84fccecd2e57856057918cdb504befca10726b29ddd5ce7ba931",
+    "name": "SUCRALOSA",
+    "concentration": "0.5 mg",
+    "fractions": 100
+  },
+  {
+    "id": "63d81f785ac7f8dd1a6fdc07139db1b6b44a0471eab10e432b0cba7068f58e85",
+    "name": "DEXTROMETORFANO BROMHIDRATO",
+    "concentration": "15 mg/5 mL",
+    "fractions": 1
+  },
+  {
+    "id": "b81a36244db23e7bafbcc74a316fc4755e718df37211f13e001db7b657dae456",
+    "name": "DEXTROMETORFANO BROMHIDRATO MONOHIDRATO",
+    "concentration": "15 mg/ 5 mL",
+    "fractions": 1
+  },
+  {
+    "id": "e24db1d97fee69bcbb521dd190731922f5f04a9ee9373d5dfdfc6dc8213c2b0d",
+    "name": "ACESULFAMO POTASICO + ASPARTAMO",
+    "concentration": "5 %",
+    "fractions": 1
+  },
+  {
+    "id": "212c8177d7a69620e9bc46998687d2c2e3a053bba65d2cd0b5b2f029684b87b1",
+    "name": "GLUCOSA MONOHIDRATO",
+    "concentration": "33% X 20ML",
+    "fractions": 50
+  },
+  {
+    "id": "86b2c73e528aadf562b5ee343721897eb6f7b5e8f995a08e362ca09f922abbfd",
+    "name": "DEXTROSA",
+    "concentration": "10 %",
+    "fractions": 1
+  },
+  {
+    "id": "25c617db042c6132afffcdb1e2f479fc63df86b2e9b521aacb587015cbdaac9b",
+    "name": "GLUCOSA ANHIDRA",
+    "concentration": "50%",
+    "fractions": 12
+  },
+  {
+    "id": "1cadaa93ba5edadd3910a65f06561a292a453c81b0b875757ae34f010eb6862d",
+    "name": "GLUCOSA",
+    "concentration": "33.3 %",
+    "fractions": 25
+  },
+  {
+    "id": "86b2b9cc67e6aab579181f7a52ce2c767eeff9cdd8d293d010da4493e67362e6",
+    "name": "DEXTROSA MONOHIDRATO",
+    "concentration": "33.3 %",
+    "fractions": 5
+  },
+  {
+    "id": "47e7aa048e1e7c31bc8121dbbd98ff985215edf77494353618ece4e92707e7de",
+    "name": "DIAZEPAM",
+    "concentration": "10 mg /2 mL",
+    "fractions": 50
+  },
+  {
+    "id": "fe046f6971ab4448f369b42673547980897151c23fbccd28f81489b11c1312d1",
+    "name": "DICLOFENACO SODICO",
+    "concentration": "75 mg/ 3 mL",
+    "fractions": 1
+  },
+  {
+    "id": "614171ec6308ec89de78388aedb0f5d4a4b1811142c9b7f403e6e5e80305df06",
+    "name": "DICLOFENACO DIETILAMINA",
+    "concentration": "2 %",
+    "fractions": 1
+  },
+  {
+    "id": "3bba11e480d82c6af4cb5bf9dccf4c86bc0cee5750bd6792c075e19b3d1821a8",
+    "name": "DICLOFENACO DIETILAMONIO",
+    "concentration": "2 %",
+    "fractions": 1
+  },
+  {
+    "id": "7106f740e04085cff16799a0ccd2282f49a3b0b162780bbf933724dbb2318e48",
+    "name": "DICLOFENACO",
+    "concentration": "75 mg/3 mL",
+    "fractions": 100
+  },
+  {
+    "id": "21101568b3a419c05e7a78d301b9139bbcc38fe6132450c77c11ef0e151eeb58",
+    "name": "DICLOFENACO POTASICO",
+    "concentration": "50 mg",
+    "fractions": 100
+  },
+  {
+    "id": "d325969da73ff4bbe4f659029c111b70ccf58bff57a780978b51d20c5f26ec05",
+    "name": "DICLOXACILINA SODICA MONOHIDRATO",
+    "concentration": "500 mg",
+    "fractions": 100
+  },
+  {
+    "id": "a13a53e6d7046f05fbefe28a842fad0154df8454e546bff1313919fc5de4ad51",
+    "name": "DICLOXACILINA",
+    "concentration": "500 mg",
+    "fractions": 100
+  },
+  {
+    "id": "de4ebd0d78016ecc4d23fcac2a28b13bb2bb9432e98de3b72f2d6de5cb3a79cd",
+    "name": "DIGOXINA",
+    "concentration": "0,25 mg",
+    "fractions": 100
+  },
+  {
+    "id": "6b4a8f93119ea2266ea21516ce83c4c21903e751794a9725e348a704cfe30775",
+    "name": "DIMENHIDRINATO",
+    "concentration": "50 mg",
+    "fractions": 100
+  },
+  {
+    "id": "09f991ec9b737c7003d4e7963717a9e521f93816d8dd64502ecd4c8233377d72",
+    "name": "DINITRATO DE ISOSORBIDA",
+    "concentration": "5 mg",
+    "fractions": 20
+  },
+  {
+    "id": "a43c338f5ba8b2de092ee3d4bf2301b42282e6004b3244cad72348f2780f957c",
+    "name": "DOBUTAMINA CLORHIDRATO",
+    "concentration": "250 mg/ 20 mL",
+    "fractions": 25
+  },
+  {
+    "id": "392e457f58fc94ce61b4103ace57b9ea6c0bf63e860d09419f631e9c79d0c798",
+    "name": "DOPAMINA CLORHIDRATO",
+    "concentration": "40 mg/mL",
+    "fractions": 1
+  },
+  {
+    "id": "80839bbff1971db7cc2a86dd1c407575d8ade70d1a5a79d961c2f0514a400566",
+    "name": "DOXICICLINA HICLATO",
+    "concentration": "100 mg",
+    "fractions": 100
+  },
+  {
+    "id": "84e6a2d43795619964207aa7f7094bd5b7880ae835327ad922b30d7d9d901578",
+    "name": "DOXORUBICINA CLORHIDRATO",
+    "concentration": "10 mg",
+    "fractions": 1
+  },
+  {
+    "id": "ca4bab01f5fe952eaec7a6875dfa570fc98d5ec18e80b0745ebe79804d72d49e",
+    "name": "ENALAPRIL MALEATO",
+    "concentration": "20 mg",
+    "fractions": 100
+  },
+  {
+    "id": "ad82afe181deae77c520544e0d6a6b6b48213502331a18d4d9a8eefb2cf4c6d9",
+    "name": "ENALAPRIL",
+    "concentration": "5 mg",
+    "fractions": 20
+  },
+  {
+    "id": "f3b3a526983c59a2811f69289d08091bfaabeb776050a1a0fdf813a8d4c7342d",
+    "name": "EPINEFRINA BITARTRATO",
+    "concentration": "1 mg/ mL",
+    "fractions": 50
+  },
+  {
+    "id": "10286886fd34f282348e31e81110f2c01a65e0085511677321e54224d52cf060",
+    "name": "EPINEFRINA",
+    "concentration": "1 mg/ mL",
+    "fractions": 10
+  },
+  {
+    "id": "891bca1e0979376ac798b1bc05d3e1dbe86d6883c317ea92c99e2139cd40dd75",
+    "name": "EPOETINA ALFA",
+    "concentration": "2000 UI/mL",
+    "fractions": 10
+  },
+  {
+    "id": "86f44805c770375b524db6eeb70bf41024b8f946cbd7c7cf3822fdff9e6d2bf7",
+    "name": "ESCOPOLAMINA N-BUTILBROMURO",
+    "concentration": "20 mg/mL",
+    "fractions": 25
+  },
+  {
+    "id": "3fe0aa261030c8c97f77e016798e296c77adae8679bcd93520dd7669e4fefd77",
+    "name": "HIOSCINA N-BUTILBROMURO",
+    "concentration": "20 mg/ mL",
+    "fractions": 10
+  },
+  {
+    "id": "fb7669ece4b3397887cbcb36af8ce2b5b68373f947cdcac0cf39d8c8f2566ce2",
+    "name": "ESPIRONOLACTONA",
+    "concentration": "25 mg",
+    "fractions": 500
+  },
+  {
+    "id": "59db64a99641c7fad2a667abfe7a48f80b60071976cda64e243ac7f1f87f9d78",
+    "name": "FENITOINA SODICA",
+    "concentration": "100 mg",
+    "fractions": 100
+  },
+  {
+    "id": "1a53d01902593e361bcec0a680264fbc47cddd68b0ae7da3c93c478cab72c7b5",
+    "name": "FENTANILO CITRATO",
+    "concentration": "0.5 mg/ 10 mL",
+    "fractions": 20
+  },
+  {
+    "id": "ba1bdb4289922123097c68f2bc5ecc00de24a44e7578a4ee7ffe50a76a4b9147",
+    "name": "FILGRASTIM",
+    "concentration": "300 µg/mL",
+    "fractions": 1
+  },
+  {
+    "id": "5a859f13e124b797d612915cf22d043917b8e40ba0935e5cd1fecf02758c369e",
+    "name": "FITOMENADIONA",
+    "concentration": "10 mg/ mL",
+    "fractions": 10
+  },
+  {
+    "id": "74dfd890aa227ad7cb56d9521e8ce8e5414c7611c15040ad9b455161f597bfc7",
+    "name": "FLUCONAZOL",
+    "concentration": "150 mg",
+    "fractions": 100
+  },
+  {
+    "id": "981d99f8034fc5f7349da443d991bc1f4f449e373d2e19e9743bd82d1a75d7b2",
+    "name": "FLUMAZENIL",
+    "concentration": "0,5 mg/ 5 mL",
+    "fractions": 5
+  },
+  {
+    "id": "c939ca17eae242e3777ab48850615d33c13387b2d2f6676729581e970ad9f137",
+    "name": "FLUOXETINA CLORHIDRATO",
+    "concentration": "20 mg",
+    "fractions": 100
+  },
+  {
+    "id": "96a1ed70775374e6e28e4ffdcbf81e95cc2d1595f15349681bb9c0ab6056ebf6",
+    "name": "FUROSEMIDA",
+    "concentration": "20 mg/ 2 mL",
+    "fractions": 100
+  },
+  {
+    "id": "d105951d5b58183307689080116aed8c6d9f70446ad9f67e8b02482e480cce53",
+    "name": "GABAPENTINA",
+    "concentration": "300 mg",
+    "fractions": 100
+  },
+  {
+    "id": "979e0a3ec26b2422374e19182cf6bd0c7c3b3268ac45f5d6b48385e02fa208a1",
+    "name": "GANCICLOVIR SODICO",
+    "concentration": "500 mg",
+    "fractions": 1
+  },
+  {
+    "id": "058356a864d64e67d270c3c66347ebff51b0644bdf29d75b99f028f63dec4834",
+    "name": "GENTAMICINA SULFATO",
+    "concentration": "160 mg/ 2 mL",
+    "fractions": 10
+  },
+  {
+    "id": "ecadab97d45486009cdbd4613f0eb38d5b1b40fbc5c917b3eb171ac2393acc67",
+    "name": "GENTAMICINA",
+    "concentration": "160 mg/2 mL",
+    "fractions": 100
+  },
+  {
+    "id": "17671f305d6a42605a90f33e728f4f318d557c967b873b761aa37b28745da6ab",
+    "name": "HALOPERIDOL",
+    "concentration": "5 mg",
+    "fractions": 25
+  },
+  {
+    "id": "cee98322e8bbfe2a702ace804995ac40507ad4451ed5523a5fe67bc6d3b77f4b",
+    "name": "HALOPERIDOL DECANOATO",
+    "concentration": "50 mg/ mL",
+    "fractions": 1
+  },
+  {
+    "id": "403b63cd992d15331b4f7c2878019837aa3e5cf7cec6fbe7cb59d7e53244b862",
+    "name": "HEPARINA SODICA",
+    "concentration": "5000 UI/mL",
+    "fractions": 10
+  },
+  {
+    "id": "6d174eec045b2aa96533955727163056c4bd3de94f27150272ec0fae15e177a9",
+    "name": "HEPARINA DE SODIO",
+    "concentration": "5000 UI/ mL",
+    "fractions": 10
+  },
+  {
+    "id": "fb9dfc578e2d77c5b4b54fb8e6bae6819c42612f259ce26b30a489170ed5ca21",
+    "name": "HIDROCLOROTIAZIDA",
+    "concentration": "50 mg",
+    "fractions": 200
+  }
+]

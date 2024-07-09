@@ -1,0 +1,16 @@
+{
+  "name": "@noz/scrapers-libs",
+  "version": "0.0.0",
+  "description": "puede contener librerías y módulos comunes que se utilizan en todo el proyecto. Por ejemplo, librerías para conectarse a una base de datos o librerías de manejo de fechas.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@noz/eslint-config":"workspace:*",
+    "@noz/tsconfig":"workspace:*"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@noz/scrapers-helpers",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "puede contener funciones y módulos que son específicos para la extracción de datos en sí. Por ejemplo, funciones que hacen solicitudes web y extraen datos de HTML o JSON, o módulos que manejan la autenticación y el control de sesiones en sitios web.",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@noz/eslint-config": "workspace:*",
+    "@noz/scrapers-utils": "workspace:*",
+    "@noz/tsconfig": "workspace:*",
+    "playwright": "1.44.1",
+    "typescript": "5.4.5"
+  }
+}

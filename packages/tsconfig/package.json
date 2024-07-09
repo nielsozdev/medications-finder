@@ -1,0 +1,13 @@
+{
+  "name": "@noz/tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "base.json",
+    "scrapers.json",
+    "nextjs.json",
+    "react-library.json"
+  ],
+  "devDependencies": {
+  }
+}

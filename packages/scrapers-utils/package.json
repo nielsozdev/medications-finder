@@ -1,0 +1,17 @@
+{
+  "name": "@noz/scrapers-utils",
+  "version": "0.0.0",
+  "description": "puede contener funciones y herramientas que se utilizan en varias partes del proyecto. Por ejemplo, funciones para limpiar y normalizar los datos extraídos, para enviar notificaciones o para realizar operaciones matemáticas.",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@noz/eslint-config": "workspace:*",
+    "@noz/tsconfig": "workspace:*",
+    "@noz/utils": "workspace:*",
+    "playwright": "1.36.1"
+  }
+}

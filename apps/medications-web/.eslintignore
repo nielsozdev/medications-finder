@@ -1,0 +1,46 @@
+# Ignorar directorios específicos
+.vscode/
+/vendor/
+/mock/
+/dist/
+/build/
+_gh_pages/
+.next/
+public/
+.vercel/
+.turbo/
+node_modules/
+coverage/
+out/
+
+# Ignorar archivos específicos por extensión
+*.ico
+*.min.css
+*.css
+*.log
+*.lock
+*-invalid.*
+
+# Ignorar archivos generados
+*.d.ts
+*.js.map
+
+# Ignorar archivos de configuración y dependencias
+.gitignore
+vite.config.js
+package-lock.json
+yarn.lock
+.pnp
+.pnp.js
+
+# Ignorar archivos de debug y misceláneos
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+*.pem
+
+# Lintear solo lo que está dentro de src
+# **
+# !src/
+# src/**/*
