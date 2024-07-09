@@ -23,7 +23,7 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "deploy:web": "turbo run build --filter=@noz/medications-web"
+    "deploy:web": "turbo run build --filter=@noz/medications-web -- includeDependencies --no-deps"
   },
   "devDependencies": {
     "@noz/tsconfig": "workspace:*",
