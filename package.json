@@ -22,7 +22,8 @@
     "build:all": "cd packages && npm run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "deploy:web": "turbo run build --scope=@noz/medications-web --include-dependencies --no-deps && vercel --prod",
   },
   "devDependencies": {
     "@noz/tsconfig": "workspace:*",
