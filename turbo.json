@@ -1,18 +1,9 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
-    "clean": {
-      "outputs": [
-        "dist/**"
-      ]
-    },
     "build": {
       "dependsOn": [
-        "clean",
         "^build"
-      ],
-      "env": [
-        "SOME_ENV_VAR"
       ],
       "outputs": [
         "dist/**",
@@ -20,38 +11,17 @@
         "!.next/cache/**"
       ]
     },
-    "medications-web#build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "env": [
-        "NEXT_PUBLIC_ALGOLIA_APP_ID",
-        "NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY",
-        "NEXT_PUBLIC_ALGOLIA_INDEX_NAME",
-        "NEXT_PUBLIC_ALGOLIA_SEARCH_ADMIN_KEY"
-      ],
+    "test": {
       "outputs": [
-        ".next/**",
-        "!.next/cache/**"
+        "coverage/**"
+      ],
+      "dependsOn": [
+        "build"
       ]
     },
-    "prisma#build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "prisma/generated/**"
-      ],
-      "env": [
-        "DATABASE_URL",
-        "DIRECT_URL"
-      ]
+    "dev": {
+      "cache": false,
+      "persistent": true
     }
-  },
-  "globalEnv": [
-    "GITHUB_TOKEN"
-  ],
-  "globalDependencies": [
-    "tsconfig.json"
-  ]
+  }
 }

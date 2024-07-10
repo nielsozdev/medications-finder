@@ -22,3 +22,15 @@
     "**/.env.*local"
   ]
 }
+"prisma#build": {
+  "dependsOn": [
+    "^build"
+  ],
+  "outputs": [
+    "prisma/generated/**"
+  ],
+  "env": [
+    "DATABASE_URL",
+    "DIRECT_URL"
+  ]
+}

@@ -1,13 +1,24 @@
 {
   "extends": "@noz/tsconfig/node.json",
   "compilerOptions": {
-    "moduleResolution": "NodeNext",
-    "composite": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "strict": true,
     "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "rootDir": "./src",
+    "sourceMap": true,
+    "composite": true,
+    "declarationMap": true
   },
   "include": [
-    "**/*.ts",
-    "index.ts"
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules",

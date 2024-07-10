@@ -7,10 +7,12 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@noz/eslint-config": "workspace:*",
     "@noz/scrapers-utils": "workspace:*",
+    "playwright": "1.44.1"
+  },
+  "devDependencies": {
+    "@noz/eslint-config": "workspace:*",
     "@noz/tsconfig": "workspace:*",
-    "playwright": "1.44.1",
     "typescript": "5.4.5"
   }
 }

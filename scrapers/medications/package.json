@@ -16,13 +16,14 @@
     "start:extract": "tsx ./src/startDataExtract.ts",
     "start:upload": "npm run normalize && npm run upload",
     "countExtractedData": "tsx ./src/scripts/db/helpers/countExtractedData.ts",
-    "build": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
+    "builsd": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
     "temp": "tsx ./src/scripts/delete/delete.ts",
     "lint": "eslint . --fix"
   },
   "dependencies": {
     "@noz/prisma": "workspace:*",
     "@noz/helpers": "workspace:*",
+    "@noz/medications-core": "workspace:*",
     "@noz/scrapers-helpers": "workspace:*",
     "@noz/scrapers-utils": "workspace:*",
     "@noz/utils": "workspace:*",
@@ -34,7 +35,6 @@
   },
   "devDependencies": {
     "@noz/eslint-config": "workspace:*",
-    "@noz/medications-core": "workspace:*",
     "@noz/tsconfig": "workspace:*",
     "@types/jest": "29.5.12",
     "@types/node": "20.14.2",

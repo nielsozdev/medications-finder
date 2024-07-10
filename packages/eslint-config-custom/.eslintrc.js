@@ -293,7 +293,8 @@ module.exports = {
     {
       files: ['**/*.ts'],
       extends: ['standard-with-typescript'],
-      plugins: ['@typescript-eslint', 'typescript-sort-keys'],
+      plugins: ['typescript-sort-keys'],
+      // plugins: ['@typescript-eslint', 'typescript-sort-keys'],
       rules: { ...TS_RULES },
     },
     {
@@ -306,7 +307,8 @@ module.exports = {
     {
       files: ['**/*.tsx'],
       extends: ['plugin:react/recommended', 'standard-with-typescript'],
-      plugins: ['react', 'react-hooks', '@typescript-eslint', 'typescript-sort-keys'],
+      plugins: ['react', 'react-hooks', 'typescript-sort-keys'],
+      // plugins: ['react', 'react-hooks', '@typescript-eslint', 'typescript-sort-keys'],
       parser: '@typescript-eslint/parser',
       parserOptions: { ecmaFeatures: { jsx: true } },
       rules: { ...TS_RULES, ...REACT_RULES },

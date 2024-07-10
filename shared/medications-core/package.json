@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "build": "bun rimraf tsconfig.tsbuildinfo && bun run clean && tsc -p tsconfig.json",
     "clean": "rimraf dist",
@@ -13,7 +13,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@noz/eslint-config": "workspace:*",
     "@noz/tsconfig": "workspace:*",
     "@types/node": "20.14.2",

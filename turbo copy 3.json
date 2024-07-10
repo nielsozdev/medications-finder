@@ -1,0 +1,93 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "dev": {
+      "cache": false
+    },
+    "clean": {
+      "outputs": [
+        "dist/**"
+      ]
+    },
+    "@noz/prisma#generate": {
+      "outputs": [
+        "prisma/client/**"
+      ],
+      "env": [
+        "DATABASE_URL",
+        "DIRECT_URL"
+      ]
+    },
+    "@noz/medications-core#build": {
+      "dependsOn": [
+        "^build",
+        "@noz/prisma#generate"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
+    },
+    "@noz/medications-web#build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "env": [
+        "NEXT_PUBLIC_ALGOLIA_APP_ID",
+        "NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY",
+        "NEXT_PUBLIC_ALGOLIA_INDEX_NAME",
+        "NEXT_PUBLIC_ALGOLIA_SEARCH_ADMIN_KEY"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**"
+      ]
+    },
+    "@noz/scraper-medications#build": {
+      "dependsOn": [
+        "^build",
+        "@noz/prisma#generate"
+      ],
+      "env": [
+        "DATABASE_URL"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
+    },
+    "@noz/prisma#build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/prisma/**"
+      ]
+    },
+    "@noz/scrapers-helpers#build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
+    },
+    "@noz/scrapers-utils#build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
+    },
+    "@noz/utils#build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
+    }
+  },
+  "globalEnv": [
+    "GITHUB_TOKEN"
+  ]
+}

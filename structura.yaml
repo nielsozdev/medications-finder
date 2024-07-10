@@ -1,0 +1,33 @@
+ monorepo
+  -apps
+    -medications-web
+  -pacakges
+    -eslint-config-custom
+    -tsconfig
+    -helpers
+    -utils
+    -prisma
+    -scrapers-libs
+    -scrapers-utils
+    -scraper-helpers
+  -scrapers
+    -esablishments
+    -medications
+  -shared
+    -ui
+    -hooks
+    -medications-core
+turbo.json
+
+
+-@noz/prisma
+  -prisma
+    -client
+      -...
+  -package.json
+  -tsconfig.json
+  -src
+    -migrations/
+    -schema.prisma
+    -index.ts
+    -next.ts

@@ -31,8 +31,8 @@ export async function pressButtonSearch(page: Page, { selector = '', element = n
     await page.waitForLoadState('domcontentloaded')
 
     return true
-  } catch (err) {
-    console.log('Error en (presSeachrButton) ', err.nmessage)
+  } catch (err: any) {
+    console.log('Error en (presSeachrButton) ', err.message)
 
     return false
   }

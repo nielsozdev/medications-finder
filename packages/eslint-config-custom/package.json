@@ -5,7 +5,7 @@
   "private": true,
   "license": "MIT",
   "description": "ESLint config for Noz",
-  "devDependencies": {
+  "dependencies": {
     "@typescript-eslint/eslint-plugin": "7.15.0",
     "@typescript-eslint/parser": "7.15.0",
     "eslint": "8.57.0",

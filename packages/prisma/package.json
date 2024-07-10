@@ -1,22 +1,43 @@
 {
   "name": "@noz/prisma",
   "version": "0.0.0",
-  "description": "",
+  "description": "Prisma client for Noz",
   "author": "Niels Olivera Zurita",
   "license": "ISC",
-  "main": "src/index.ts",
-  "scripts": {
-    "lint": "eslint . --fix"
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./next": {
+      "require": "./dist/next.js",
+      "import": "./dist/next.js",
+      "types": "./dist/types/next.d.ts"
+    }
   },
-  "dependencies": {
-    "@prisma/client": "5.15.0"
+  "scripts": {
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
+    "lint": "eslint . --fix",
+    "generate": "prisma generate",
+    "build": "npm run clean && tsc -p tsconfig.json && prisma generate"
   },
   "devDependencies": {
     "@noz/eslint-config": "workspace:*",
     "@noz/tsconfig": "workspace:*",
     "@types/node": "20.14.2",
-    "prisma": "^5.15.0",
+    "cpx": "1.5.0",
+    "prisma": "5.16.2",
+    "rimraf": "6.0.0",
     "ts-node": "10.9.2",
     "typescript": "5.4.5"
+  },
+  "prisma": {
+    "schema": "./src/schema.prisma"
+  },
+  "dependencies": {
+    "@prisma/client": "5.16.2"
   }
 }

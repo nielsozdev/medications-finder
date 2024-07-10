@@ -1,0 +1,47 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "dev": {
+      "cache": false
+    },
+    "clean": {
+      "outputs": [
+        "dist/**"
+      ]
+    },
+    "@noz/prisma#generate": {
+      "outputs": [
+        "src/prisma/client/**"
+      ],
+      "env": [
+        "DATABASE_URL",
+        "DIRECT_URL"
+      ]
+    },
+    "@noz/prisma#build": {
+      "dependsOn": [
+        "^build",
+        "@noz/prisma#generate"
+      ],
+      "outputs": [
+        "dist/prisma/**"
+      ]
+    },
+    "@noz/medications-web#build": {
+      "dependsOn": [
+        "^build",
+        "@noz/prisma#build"
+      ],
+      "env": [
+        "NEXT_PUBLIC_ALGOLIA_APP_ID",
+        "NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY",
+        "NEXT_PUBLIC_ALGOLIA_INDEX_NAME",
+        "NEXT_PUBLIC_ALGOLIA_SEARCH_ADMIN_KEY"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**"
+      ]
+    }
+  }
+}
