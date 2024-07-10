@@ -23,5 +23,13 @@
       "cache": false,
       "persistent": true
     }
-  }
+  },
+  "globalEnv": [
+    "NEXT_PUBLIC_ALGOLIA_APP_ID",
+    "NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY",
+    "NEXT_PUBLIC_ALGOLIA_INDEX_NAME",
+    "NEXT_PUBLIC_ALGOLIA_SEARCH_ADMIN_KEY",
+    "DATABASE_URL",
+    "DIRECT_URL"
+  ]
 }
