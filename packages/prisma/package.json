@@ -22,7 +22,8 @@
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
     "lint": "eslint . --fix",
     "generate": "prisma generate",
-    "build": "npm run clean && tsc -p tsconfig.json && prisma generate"
+    "build": "npm run clean && prisma generate && tsc -p tsconfig.json",
+    "postbuild": "cpx \"./src/generated/client/**/*\" ./dist/generated/client"
   },
   "devDependencies": {
     "@noz/eslint-config": "workspace:*",
