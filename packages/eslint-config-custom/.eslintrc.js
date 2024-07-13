@@ -19,8 +19,7 @@ const IMPORT_ORDER_RULES = {
         { group: 'external', position: 'after', pattern: '@noz/**' },
         { group: 'external', position: 'after', pattern: '@core' },
         { group: 'external', position: 'after', pattern: '@core/**' },
-        { group: 'sibling', position: 'after', pattern: '~/components/**' },
-        { group: 'sibling', position: 'after', pattern: '~/styles/**' },
+        { group: 'sibling', position: 'after', pattern: '~/**' },
       ],
     },
   ],
@@ -172,6 +171,7 @@ const JS_TO_TS_OFF_RULES = {
 const TS_DISABLED_RULES = {
   '@typescript-eslint/no-unsafe-argument': 'off',
   '@typescript-eslint/non-nullable-type-assertion-style': 'off',
+  '@typescript-eslint/indent': 'off',
 }
 const TS_RULES = {
   ...TYPESCRIPT_SORT_KEYS_RULES,
@@ -326,7 +326,7 @@ module.exports = {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     next: {
-      rootDir: 'webs/*/',
+      rootDir: 'apps/*/',
     },
   },
 

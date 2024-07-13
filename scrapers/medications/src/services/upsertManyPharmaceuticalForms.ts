@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-import prisma, { Prisma, type PharmaceuticalForm } from '@noz/prisma'
+import prisma, { Prisma, type PharmaceuticalForm } from '@noz/db'
 
 import { PATHS } from '~/constants/paths'
 

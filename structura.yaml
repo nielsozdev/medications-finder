@@ -20,7 +20,7 @@
 turbo.json
 
 
--@noz/prisma
+-@noz/db
   -prisma
     -client
       -...

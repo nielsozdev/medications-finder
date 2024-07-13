@@ -1,16 +1,11 @@
-import { AppBar, Box, Container, Stack, Toolbar } from '@mui/material'
+import { AppBar, Box, Container, Toolbar } from '@mui/material'
 
 import { useTheme } from '@mui/material/styles'
 
-// import { navConfig } from './config-navigation'
-// import { NavDesktop } from './nav/desktop/NavDesktop'
-// import { NavMobile } from './nav/mobile/NavMobile'
-
-import { AutoCompleteSearcherInput } from '~/components/AutocompleteSearcherInput'
+import { AutocompleteInput } from '~/components/AutocompleteInput'
 import { DarkModeButton } from '~/components/DarkModeButton'
-import { HeaderLocationSelectors } from '~/components/HeaderLocationSelectors'
+import LocationsPopover from '~/components/HeaderLocationSelectors/LocationsPopover'
 import { Logo } from '~/components/Logo'
-
 import { useOffSetTop } from '~/hooks/useOffSetTop'
 import { HeaderShadow } from '~/layouts/_common/HeaderShadow'
 import { HEADER } from '~/layouts/config-layout'
@@ -24,31 +19,32 @@ export function Header() {
   const offsetTop = useOffSetTop(HEADER.H_DESKTOP)
 
   return (
-    <AppBar>
-      <Toolbar
-        disableGutters
-        sx={{
-          height: {
-            xs: HEADER.H_MOBILE,
-            md: HEADER.H_DESKTOP,
-          },
-          transition: theme.transitions.create(['height'], {
-            easing: theme.transitions.easing.easeInOut,
-            duration: theme.transitions.duration.shorter,
-          }),
-          ...(offsetTop && {
-            ...bgBlur({
-              color: theme.palette.background.paper,
-            }),
+    <>
+      <AppBar>
+        <Toolbar
+          disableGutters
+          sx={{
             height: {
-              md: HEADER.H_DESKTOP_OFFSET,
+              xs: HEADER.H_MOBILE,
+              md: HEADER.H_DESKTOP,
             },
-          }),
-        }}
-      >
-        <Container sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
+            transition: theme.transitions.create(['height'], {
+              easing: theme.transitions.easing.easeInOut,
+              duration: theme.transitions.duration.shorter,
+            }),
+            ...(offsetTop && {
+              ...bgBlur({
+                color: theme.palette.background.paper,
+              }),
+              height: {
+                md: HEADER.H_DESKTOP_OFFSET,
+              },
+            }),
+          }}
+        >
+          <Container sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
 
-          {/* <Box>
+            {/* <Box>
             <IconButton
               aria-label='open drawer'
               color='inherit'
@@ -60,38 +56,29 @@ export function Header() {
             </IconButton>
 
           </Box> */}
-          <Box>
             <Logo />
-          </Box>
-          {/* <Box sx={{ flexGrow: 1 }} /> */}
-          <Box sx={{ display: 'flex', flexGrow: 1, alignItems: 'center', px: 2 }}>
-            <AutoCompleteSearcherInput />
-            <HeaderLocationSelectors width={105} />
-          </Box>
-
-          {/* {mdUp && <NavDesktop data={navConfig} offsetTop={offsetTop} />} */}
-
-          <Stack alignItems="center" direction={{ xs: 'row', md: 'row-reverse' }}>
-            {/* <Button href={'paths.minimalUI'} rel="noopener" target="_blank" variant="contained">
-              Purchase Now
-              </Button> */}
-
-            {/* {mdUp && <LoginButton />} */}
+            <Box
+              sx={{
+                display: 'flex',
+                flexGrow: 1,
+                alignItems: 'center',
+                mr: 2,
+                ml: {
+                  xs: 0,
+                  md: 2,
+                },
+              }}
+            >
+              <LocationsPopover width={105} />
+              <AutocompleteInput />
+            </Box>
 
             <DarkModeButton />
-            {/* <SettingsButton
-              sx={{
-                ml: { xs: 1, md: 0 },
-                mr: { md: 2 },
-              }}
-            /> */}
+          </Container>
+        </Toolbar>
 
-            {/* {!mdUp && <NavMobile data={navConfig} offsetTop={offsetTop} />} */}
-          </Stack>
-        </Container>
-      </Toolbar>
-
-      {offsetTop && <HeaderShadow />}
-    </AppBar>
+        {offsetTop && <HeaderShadow />}
+      </AppBar>
+    </>
   )
 }

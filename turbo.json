@@ -5,24 +5,30 @@
       "dependsOn": [
         "^build"
       ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env",
+        ".env.*"
+      ],
       "outputs": [
         "dist/**",
         ".next/**",
         "!.next/cache/**"
       ]
     },
-    "test": {
-      "outputs": [
-        "coverage/**"
-      ],
-      "dependsOn": [
-        "build"
-      ]
-    },
+    "db:migrate:deploy": {},
+    "db:push": {},
+    "db:seed": {},
     "dev": {
       "cache": false,
       "persistent": true
-    }
+    },
+    "generate": {
+      "dependsOn": [
+        "^generate"
+      ]
+    },
+    "lint": {}
   },
   "globalEnv": [
     "NEXT_PUBLIC_ALGOLIA_APP_ID",

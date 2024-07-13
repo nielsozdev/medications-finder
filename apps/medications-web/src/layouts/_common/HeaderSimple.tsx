@@ -14,7 +14,6 @@ import { HeaderShadow } from './HeaderShadow'
 import { SettingsButton } from './SettingsButton'
 
 import { Logo } from '~/components/Logo'
-
 import { useOffSetTop } from '~/hooks/useOffSetTop'
 import { bgBlur } from '~/theme/css'
 

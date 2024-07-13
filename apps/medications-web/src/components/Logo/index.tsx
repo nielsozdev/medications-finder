@@ -10,6 +10,7 @@ import Link from '@mui/material/Link'
 
 import { useSettingsContext } from '~/context/SettingsProvider/useSettingsContext'
 import { useResponsive } from '~/hooks/useResponsive'
+import { Iconify } from '~/ui/Iconify'
 
 export interface LogoProps extends BoxProps {
   disabledLink?: boolean
@@ -44,28 +45,33 @@ export const Logo = forwardRef<HTMLDivElement, LogoProps>(
         sx={{
           // width: 40,
           height: 40,
-          // display: 'flex',
+          display: 'flex',
+          gap: 1,
+          alignItems: 'center',
           color: settings.themeMode === 'light' ? 'black' : 'white',
           ...sx,
         }}
         {...other}
       >
-        <Typography
-          fontSize={24}
-          fontWeight={700}
-          letterSpacing={0}
-          // lineHeight={1}
-          sx={{
-            color: settings.themeMode === 'light' ? 'black' : 'white',
-            display: 'flex',
-            // fill: 'currentColor',
-            height: '1em',
-            // width: '1em',
-          }}
-          textTransform="none"
-        >
-          {mdUp ? 'Hampi' : 'H'}
-        </Typography>
+        <Iconify icon={'emojione:letter-h'} width={35} />
+        {mdUp && (
+          <Typography
+            fontSize={24}
+            fontWeight={700}
+            letterSpacing={0}
+            // lineHeight={1}
+            sx={{
+              color: settings.themeMode === 'light' ? 'black' : 'white',
+              display: 'flex',
+              // fill: 'currentColor',
+              // height: '1em',
+              // width: '1em',
+            }}
+            textTransform="none"
+          >
+            Hampi
+          </Typography>
+        )}
       </Box>
     )
 

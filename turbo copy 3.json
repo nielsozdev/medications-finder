@@ -9,7 +9,7 @@
         "dist/**"
       ]
     },
-    "@noz/prisma#generate": {
+    "@noz/db#generate": {
       "outputs": [
         "prisma/client/**"
       ],
@@ -21,7 +21,7 @@
     "@noz/medications-core#build": {
       "dependsOn": [
         "^build",
-        "@noz/prisma#generate"
+        "@noz/db#generate"
       ],
       "outputs": [
         "dist/**"
@@ -45,7 +45,7 @@
     "@noz/scraper-medications#build": {
       "dependsOn": [
         "^build",
-        "@noz/prisma#generate"
+        "@noz/db#generate"
       ],
       "env": [
         "DATABASE_URL"
@@ -54,7 +54,7 @@
         "dist/**"
       ]
     },
-    "@noz/prisma#build": {
+    "@noz/db#build": {
       "dependsOn": [
         "^build"
       ],

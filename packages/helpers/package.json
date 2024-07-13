@@ -14,7 +14,7 @@
   "devDependencies": {
     "@noz/eslint-config": "workspace:*",
     "@noz/tsconfig": "workspace:*",
-    "@types/node": "20.14.2",
-    "typescript": "5.4.5"
+    "@types/node": "20.14.10",
+    "typescript": "5.5.3"
   }
 }

@@ -23,7 +23,7 @@
       "@noz/utils": [
         "../../packages/utils"
       ],
-      "@noz/prisma": [
+      "@noz/db": [
         "../../packages/prisma"
       ]
     }

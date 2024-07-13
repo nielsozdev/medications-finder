@@ -14,13 +14,12 @@
     "@noz/scrapers-utils": "workspace:*",
     "@noz/utils": "workspace:*",
     "@supabase/supabase-js": "2.43.4",
-    "dotenv": "16.4.5",
-    "playwright": "1.44.1"
+    "playwright": "1.45.1"
   },
   "devDependencies": {
     "@noz/eslint-config": "workspace:*",
     "@noz/tsconfig": "workspace:*",
-    "@types/node": "20.14.2",
-    "typescript": "5.4.5"
+    "typescript": "5.5.3",
+    "@types/node": "20.14.10"
   }
 }

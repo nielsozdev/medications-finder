@@ -7,7 +7,5 @@
     "scrapers.json",
     "nextjs.json",
     "react-library.json"
-  ],
-  "devDependencies": {
-  }
+  ]
 }

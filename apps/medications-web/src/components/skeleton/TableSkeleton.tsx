@@ -1,11 +1,16 @@
+'use client'
 import { Box, Card, CardActionArea, CardContent, CardHeader, Container } from '@mui/material'
 
 import Skeleton from '@mui/material/Skeleton'
 import Stack from '@mui/material/Stack'
 import { type TableRowProps } from '@mui/material/TableRow'
 
-const array = Array.from({ length: 10 })
+import { useResponsive } from '~/hooks/useResponsive'
+
+const array = Array.from({ length: 6 })
 export default function TableSkeleton({ ...other }: TableRowProps) {
+  const mdUp = useResponsive('up', 'md')
+
   return (
     <Container maxWidth={'lg'}>
       <Stack alignItems="start" direction="row" spacing={2}>
@@ -17,7 +22,7 @@ export default function TableSkeleton({ ...other }: TableRowProps) {
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+          gridTemplateColumns: mdUp ? 'repeat(auto-fit, minmax(400px, 1fr))' : '1fr',
           gap: 2,
           mt: 3,
         }}

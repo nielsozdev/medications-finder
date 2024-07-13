@@ -4,7 +4,6 @@ import { Box } from '@mui/material'
 
 import { ResultsTable } from '~/components/ResultsTable'
 import TableSkeleton from '~/components/skeleton/TableSkeleton'
-
 import { HEADER } from '~/layouts/config-layout'
 
 interface ResultsPageProps {

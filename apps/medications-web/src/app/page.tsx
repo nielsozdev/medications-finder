@@ -1,43 +1,35 @@
-import { AutoCompleteSearcherInput } from '~/components/AutocompleteSearcherInput'
+import { Container } from '@mui/material'
+
+import { AutocompleteInput } from '~/components/AutocompleteInput'
 import { LocationSelectors } from '~/components/LocationSelectors'
-
 import { EmptyLayout } from '~/layouts/EmptyLayout'
-import { Iconify } from '~/ui/Iconify'
 
-// export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'bun start
 export default function HomePage() {
   return (
     <EmptyLayout>
       <main className='flex w-full flex-row justify-between min-h-screen'>
-        <div className='flex flex-col mt-[-200px] items-center justify-center container mx-auto'>
-          <h1 className='text-4xl lg:text-7xl sm:text-5xl md:text-6xl mb-14 font-bold relative'>
-            Hampi
-            <span className='absolute left-[88%] top-[90%] text-xl font-normal'>Junín</span>
-          </h1>
+        <Container maxWidth="lg" sx={{ mt: 2 }}>
+          <div className='h-full w-full grid place-items-center'>
+            <div className=' text-center'>
+              <h1 className='text-2xl lg:text-6xl sm:text-3xl md:text-4xl mb-14 font-bold relative'>
+                Hampi
+                <span className='absolute left-[75%] top-[90%] text-xl font-normal'>Junín</span>
+              </h1>
 
-          <div className="mb-2 flex  justify-center align-center w-full max-w-[584px]">
-            <div className="flex flex-1">
-              <AutoCompleteSearcherInput />
+              <div className="mb-2 flex  justify-center align-center w-full max-w-[584px]">
+                <div className="flex flex-1">
+                  <AutocompleteInput />
+                </div>
+              </div>
+              <div className="flex mt-4 ">
+                <LocationSelectors width={150} />
+              </div>
             </div>
           </div>
-          <LocationSelectors width={150} />
-        </div>
+        </Container>
       </main>
-      <div className='text-center mb-4 fixed bottom-0 left-0 right-0 w-full'>
 
-        <div className='flex flex-col items-center justify-center container mx-auto'>
-          <span className='text-xs'>Desarrollado por</span>
-          <a
-            className=' flex items-center justify-center  gap-2 '
-            href="https://www.linkedin.com/in/nielsOliveraZurita"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <Iconify icon="logos:linkedin-icon" />
-            <span className="font-semibold">Niels Olivera Zurita</span>
-          </a>
-        </div>
-      </div>
     </EmptyLayout>
   )
 }

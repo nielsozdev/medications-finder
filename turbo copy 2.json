@@ -13,7 +13,7 @@
       "dependsOn": [
         "clean",
         "^build",
-        "@noz/prisma#generate"
+        "@noz/db#generate"
       ],
       "env": [
         "DATABASE_URL"
@@ -24,7 +24,7 @@
         "!.next/cache/**"
       ]
     },
-    "@noz/prisma#generate": {
+    "@noz/db#generate": {
       "outputs": [
         "prisma/client/**"
       ],
@@ -51,7 +51,7 @@
     "@noz/scraper-medications#build": {
       "dependsOn": [
         "^build",
-        "@noz/prisma#generate"
+        "@noz/db#generate"
       ],
       "outputs": [
         "dist/**"

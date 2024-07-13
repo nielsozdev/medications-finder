@@ -21,7 +21,6 @@
     "@noz/eslint-config": "workspace:*",
     "@noz/tsconfig": "workspace:*",
     "@types/node": "20.14.2",
-    "rimraf": "6.0.0",
     "typescript": "5.4.5"
   }
 }

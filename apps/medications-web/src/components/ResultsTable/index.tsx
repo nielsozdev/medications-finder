@@ -1,9 +1,8 @@
 import { DataTable } from './DataTable'
 import { processResultsDataTable } from './processResultsDataTable'
 
-import { CustomBreadcrumbs } from '~/components/CustomBreadcrumbs'
-
 import { getMedicationPrices } from '~/actions/medicationPrices'
+import { CustomBreadcrumbs } from '~/components/CustomBreadcrumbs'
 
 interface ResultsableProps {
   department: string

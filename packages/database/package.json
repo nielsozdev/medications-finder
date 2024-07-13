@@ -1,0 +1,43 @@
+{
+  "name": "@noz/db",
+  "version": "0.0.0",
+  "description": "Prisma client for Noz",
+  "author": "Niels Olivera Zurita",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
+    "build": "npm run clean && prisma generate && tsc -p tsconfig.json",
+    "db:push-old": "prisma db push --skip-generate",
+    "db:pull": "prisma db pull",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "dev": "tsup src/* --watch",
+    "format": "prisma format",
+    "generate": "prisma generate",
+    "lint": "eslint . --fix --max-warnings 0",
+    "predev": " npm run generate",
+    "studio": "prisma studio"
+  },
+  "devDependencies": {
+    "@noz/eslint-config": "workspace:*",
+    "@noz/tsconfig": "workspace:*",
+    "@types/node": "20.14.10",
+    "prisma": "5.16.2",
+    "ts-node": "10.9.2",
+    "tsup": "8.1.0",
+    "typescript": "5.5.3"
+  },
+  "dependencies": {
+    "@prisma/client": "5.16.2"
+  }
+}

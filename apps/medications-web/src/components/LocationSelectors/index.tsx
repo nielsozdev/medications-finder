@@ -36,7 +36,7 @@ export function LocationSelectors({ defaultDistrict, defaultProvince, width }: L
   }
 
   return (
-    <div className='flex w-full justify-center align-center'>
+    <div className='flex w-full align-center'>
 
       <FormControl size="small" sx={{ m: 1, minWidth: width ?? 250 }}>
         <InputLabel id="provinces">Provincia</InputLabel>
@@ -84,6 +84,7 @@ export function LocationSelectors({ defaultDistrict, defaultProvince, width }: L
           }
         </Select>
       </FormControl>
+
     </div>
   )
 }

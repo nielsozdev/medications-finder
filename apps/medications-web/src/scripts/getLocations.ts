@@ -1,6 +1,6 @@
 'use server'
 
-import prisma from '@noz/prisma/next'
+import { prisma } from '@noz/db'
 import { createFolderAndSaveFile } from '@noz/utils'
 
 const path = './src/data/locations.json'

@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 
 import { Avatar, Box, Card, CardActionArea, CardContent, CardHeader } from '@mui/material'
 
-import { blue, yellow } from '@mui/material/colors'
+import { orange, yellow } from '@mui/material/colors'
 
 import { type ProductPrices } from './types'
 
@@ -52,7 +52,7 @@ export function MedicationItem({ item }: Props) {
         <CardActionArea>
           <CardHeader
             avatar={(
-              <Avatar sx={{ bgcolor: blue[500], fontWeight: 'bold', fontSize: '15px' }} aria-label="recipe">
+              <Avatar sx={{ bgcolor: orange[500], color: 'white', fontWeight: 'bold', fontSize: '15px' }} aria-label="recipe">
                 {getFirstLetter(establishmentName)}
               </Avatar>
             )}
@@ -89,14 +89,14 @@ export function MedicationItem({ item }: Props) {
           />
           <CardContent content='center'>
 
-            <Box sx={{ typography: 'h5', display: 'flex', alignItems: 'center', fontWeight: 'bold', color: yellow[700] }}>
+            <Box sx={{ typography: 'h6', display: 'flex', alignItems: 'center', fontWeight: 'bold', color: yellow[700] }}>
               {fcurrency(unitPrice)}
             </Box>
 
-            <Box component="div" sx={{ typography: 'h6', color: 'text.primary', display: 'flex', my: 1, fontWeight: 'bold' }}>
-              <Link href={`/medication/${productName}`} className='flex  items-center hover:underline'>
-                {formatText(productName)}
-              </Link>
+            <Box component="div" sx={{ typography: 'h5', color: 'text.primary', display: 'flex', fontWeight: 'bold' }}>
+              {/* <Link href={`/medication/${productName}`} className='flex  items-center hover:underline'> */}
+              {formatText(productName)}
+              {/* </Link> */}
             </Box>
 
             <Box component="div" sx={{ typography: 'body2', color: 'text.primary', display: 'flex', gap: 1 }}>
@@ -105,12 +105,12 @@ export function MedicationItem({ item }: Props) {
 
             <Box component="div" sx={{ typography: 'body2', color: 'text.primary', display: 'flex', gap: 2, alignItems: 'center', mt: 2 }}>
               <Box component='span' sx={{ display: 'flex', alignItems: 'center' }}>
-                <Iconify width={20} icon="mingcute:map-pin-fill" sx={{ mr: 1, color: 'text.primary' }} />
-                {district}
-              </Box>
-              <Box component='span' sx={{ display: 'flex', alignItems: 'center' }}>
                 <Iconify width={20} icon="solar:streets-map-point-bold-duotone" sx={{ mr: 1, color: 'text.primary' }} />
                 {province}
+              </Box>
+              <Box component='span' sx={{ display: 'flex', alignItems: 'center' }}>
+                <Iconify width={20} icon="mingcute:map-pin-fill" sx={{ color: 'text.primary' }} />
+                {district}
               </Box>
             </Box>
 

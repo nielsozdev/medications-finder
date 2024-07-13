@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@noz/eslint-config":"workspace:*",
-    "@noz/tsconfig":"workspace:*"
+    "@noz/eslint-config": "workspace:*",
+    "@noz/tsconfig": "workspace:*",
+    "typescript": "5.5.3",
+    "@types/node": "20.14.10"
   }
 }

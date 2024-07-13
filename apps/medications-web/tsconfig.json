@@ -36,20 +36,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    // "graphql.config.ts"
+    "next.config.mjs"
   ],
   "exclude": [
     "node_modules",
-    "**/node_modules/**",
-    "dist",
-    "build",
-    "public",
-    ".next",
-    "**/.next/**",
-    "ideas",
-    "**/ideas/**",
-    "**/dist/**",
-    "**/build/**",
-    "**/public/**",
   ]
 }

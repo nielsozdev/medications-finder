@@ -14,12 +14,12 @@
   "license": "ISC",
   "dependencies": {
     "@noz/utils": "workspace:*",
-    "playwright": "1.36.1"
+    "playwright": "1.45.1"
   },
   "devDependencies": {
     "@noz/eslint-config": "workspace:*",
     "@noz/tsconfig": "workspace:*",
-    "@types/node": "20.14.2",
-    "rimraf": "6.0.0"
+    "typescript": "5.5.3",
+    "@types/node": "20.14.10"
   }
 }

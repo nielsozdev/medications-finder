@@ -15,7 +15,6 @@ import NavList from './NavList'
 
 import { Logo } from '~/components/Logo'
 import { Scrollbar } from '~/components/Scrollbar'
-
 import { useBoolean } from '~/hooks/useBoolean'
 
 export function NavMobile({ offsetTop, data }: NavProps) {

@@ -10,10 +10,12 @@ import { Box } from '@mui/material'
 import { MedicationItem } from './MedicationItem'
 
 import { useAppStore } from '~/context/AppStoreProvider/useAppStore'
+import { useResponsive } from '~/hooks/useResponsive'
 import { EmptyContent } from '~/ui/EmptyContent'
 
 export function DataTable({ data }: any) {
   const { setMedicationStatus } = useAppStore((state) => state)
+  const mdUp = useResponsive('up', 'md')
 
   useEffect(() => {
     setMedicationStatus('success')
@@ -24,7 +26,7 @@ export function DataTable({ data }: any) {
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+          gridTemplateColumns: mdUp ? 'repeat(auto-fit, minmax(400px, 1fr))' : '1fr',
           gap: 2,
           mt: 3,
         }}

@@ -4,14 +4,13 @@ import { useEffect } from 'react'
 
 import { useSearchParams } from 'next/navigation'
 
-import Box from '@mui/material/Box'
-
-import { LocationSelectors } from '~/components/LocationSelectors'
+import { LocationSelectors } from '../LocationSelectors'
 
 import { useAppStore } from '~/context/AppStoreProvider/useAppStore'
 
 export function HeaderLocationSelectors({ width }: { width?: number }) {
   const searchParams = useSearchParams()
+
   const province = searchParams.get('province')?.toUpperCase() ?? ''
   const district = searchParams.get('district')?.toUpperCase() ?? ''
 
@@ -23,12 +22,10 @@ export function HeaderLocationSelectors({ width }: { width?: number }) {
   }, [province, setProvinceSelected, district, setDistrictSelected])
 
   return (
-    <Box sx={{ display: 'flex', gap: 1 }}>
-      <LocationSelectors
-        defaultDistrict={district}
-        defaultProvince={province}
-        width={width ?? 150}
-      />
-    </Box>
+    <LocationSelectors
+      defaultDistrict={district}
+      defaultProvince={province}
+      width={width ?? 150}
+    />
   )
 }

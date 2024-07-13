@@ -5,14 +5,13 @@ import { cookies } from 'next/headers'
 
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter'
 
-import '~/styles/algolia.css'
-import '~/styles/globals.css'
-
 import { AppStoreProvider } from '~/context/AppStoreProvider'
 import { SettingsProvider } from '~/context/SettingsProvider'
 import { defaultSettings } from '~/context/SettingsProvider/defaultSettings'
 import { type ThemeMode } from '~/context/SettingsProvider/types'
 import { rootMetadata } from '~/data/metadata/root-metadata'
+import '~/styles/algolia.css'
+import '~/styles/globals.css'
 import MotionLazy from '~/ui/animate/MotionLazy'
 
 const inter = Inter({ subsets: ['latin'] })

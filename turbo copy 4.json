@@ -9,7 +9,7 @@
         "dist/**"
       ]
     },
-    "@noz/prisma#generate": {
+    "@noz/db#generate": {
       "outputs": [
         "src/prisma/client/**"
       ],
@@ -18,10 +18,10 @@
         "DIRECT_URL"
       ]
     },
-    "@noz/prisma#build": {
+    "@noz/db#build": {
       "dependsOn": [
         "^build",
-        "@noz/prisma#generate"
+        "@noz/db#generate"
       ],
       "outputs": [
         "dist/prisma/**"
@@ -30,7 +30,7 @@
     "@noz/medications-web#build": {
       "dependsOn": [
         "^build",
-        "@noz/prisma#build"
+        "@noz/db#build"
       ],
       "env": [
         "NEXT_PUBLIC_ALGOLIA_APP_ID",
