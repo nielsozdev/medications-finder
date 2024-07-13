@@ -1,6 +1,6 @@
 'use server'
 
-// import { revalidatePath } from 'next/cache'
+import { revalidatePath } from 'next/cache'
 
 // import prisma from '@noz/db/next'
 import { prisma } from '@noz/db'
@@ -24,13 +24,13 @@ export async function getMedicationPrices(params: GetMedicationPrices) {
     province,
     query,
   } = params
-  // const departmentVal = department ? `&department=${department.toLowerCase()}` : ''
-  // const provinceVal = province ? `&province=${province.toLowerCase()}` : ''
-  // const districtVal = district ? `&district=${district.toLowerCase()}` : ''
+  const departmentVal = department ? `&department=${department.toLowerCase()}` : ''
+  const provinceVal = province ? `&province=${province.toLowerCase()}` : ''
+  const districtVal = district ? `&district=${district.toLowerCase()}` : ''
 
   const searchTerm = await findMedication(query)
 
-  // const path = `/results?query=${searchTerm}${departmentVal}${provinceVal}${districtVal}`
+  const path = `/results?query=${searchTerm}${departmentVal}${provinceVal}${districtVal}`
 
   try {
     if (!searchTerm) return []
@@ -112,7 +112,7 @@ export async function getMedicationPrices(params: GetMedicationPrices) {
 
       },
     })
-    // revalidatePath(path)
+    revalidatePath(path)
     // await createFolderAndSaveFile('./src/data/results.temp.json', data)
 
     return data

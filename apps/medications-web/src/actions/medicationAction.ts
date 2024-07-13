@@ -1,6 +1,5 @@
 'use server'
 
-import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 
 export async function medicationAction(formData: FormData) {
@@ -14,7 +13,6 @@ export async function medicationAction(formData: FormData) {
   const district = districtValue ? `&district=${districtValue.toLowerCase()}` : ''
 
   const path = `/results?query=${searchTermValue}${department}${province}${district}`
-  revalidatePath(path)
   redirect(path)
 
   return await Promise.resolve()

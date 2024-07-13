@@ -21,6 +21,7 @@ import { DarkModeButton } from '~/components/DarkModeButton'
 import { Logo } from '~/components/Logo'
 import { useOffSetTop } from '~/hooks/useOffSetTop'
 import { bgBlur } from '~/theme/css'
+import { Iconify } from '~/ui/Iconify'
 
 export function HeaderEmpty() {
   const theme = useTheme()
@@ -65,7 +66,7 @@ export function HeaderEmpty() {
               href={'/sugerencias'}
               sx={{ typography: 'subtitle2' }}
             >
-              Sugerencias
+              <Iconify icon="mingcute:message-4-fill" width={25} sx={{ color: 'text.primary' }} />
             </Link>
           </Stack>
         </Container>

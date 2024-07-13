@@ -29,27 +29,28 @@ export function SuggestionItem(props: any) {
       }}
       {...restOfprops}
     >
-      <Link href={`/results?query=${item.name}`}>
-        <ListItemText
-          primary={(
-            <>
-              <SearchIcon />
-              <Box
-                key={index}
-                component="span"
-                dangerouslySetInnerHTML={{ __html: sanitize(item._highlightResult.name.value) }}
-                sx={{ ml: 1, fontWeight: 'bold', color: 'text.secondary' }}
-              />
-            </>
-          )}
-          sx={{
-            '& mark': {
-              fontWeight: 'normal',
-              backgroundColor: 'transparent',
-              color: 'text.primary',
-            },
-          }}
-        /></Link>
+      {/* <Link href={`/results?query=${item.name}`}> */}
+      <ListItemText
+        primary={(
+          <>
+            <SearchIcon />
+            <Box
+              key={index}
+              component="span"
+              dangerouslySetInnerHTML={{ __html: sanitize(item._highlightResult.name.value) }}
+              sx={{ ml: 1, fontWeight: 'bold', color: 'text.secondary' }}
+            />
+          </>
+        )}
+        sx={{
+          '& mark': {
+            fontWeight: 'normal',
+            backgroundColor: 'transparent',
+            color: 'text.primary',
+          },
+        }}
+      />
+      {/* </Link> */}
     </ListItemButton>
   )
 }

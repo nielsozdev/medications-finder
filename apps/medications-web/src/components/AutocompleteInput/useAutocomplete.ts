@@ -6,6 +6,8 @@ import { createAutocomplete } from '@algolia/autocomplete-core'
 import { getAlgoliaResults } from '@algolia/autocomplete-preset-algolia'
 import algoliasearch from 'algoliasearch/lite'
 
+import { useSearchData } from './useSearchData'
+
 import { ENV } from '~/config/env'
 
 const { appId, apiKey, indexName } = ENV
@@ -16,8 +18,8 @@ export function useAutocomplete() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [autocompleteState, setAutocompleteState] = useState<any>({ collections: [], query: '', isOpen: false })
-
-  const query = searchParams.get('query') ?? ''
+  const { onSearchData } = useSearchData()
+  const q = searchParams.get('query') ?? ''
 
   // useEffect(() => {
   //   if (pathname === '/results' && medicationStatus === '' && query) {
@@ -30,9 +32,10 @@ export function useAutocomplete() {
 
   const autocomplete = useMemo(
     () => createAutocomplete({
-      initialState: { query },
+      initialState: { query: q },
       shouldPanelOpen: ({ state }) => state.query.length > 0,
       autoFocus: pathname === '/',
+      openOnFocus: true,
       placeholder: 'Buscar precios medicamentos en Junín',
       onStateChange: ({ state }) => { setAutocompleteState(state) },
       getSources: ({ query }) => [
@@ -54,18 +57,36 @@ export function useAutocomplete() {
               ],
             })
           },
-          onSelect({ item, setQuery, setIsOpen, refresh }) {
-            // onSearchData(`${item.name}`)
-            router.push(`/results?query=${item.name}`)
+          onSelect({ item, itemUrl, setQuery, setIsOpen, refresh }) {
+            // onSearchData(`${itemUrl}`)
             setQuery(`${item.name}`)
-            setIsOpen(false)
-            refresh()
+            // setIsOpen(false)
+            router.push(`/results?query=${item.name}`)
+            // refresh()
+          },
+          getItemUrl({ item }) {
+            return `/results?query=${encodeURIComponent(`${item.name}`)}`
           },
 
         },
       ],
+      navigator: {
+        navigate({ itemUrl }) {
+          window.location.assign(itemUrl)
+        },
+        navigateNewTab({ itemUrl }) {
+          const windowReference = window.open(itemUrl, '_blank', 'noopener')
+
+          if (windowReference) {
+            windowReference.focus()
+          }
+        },
+        navigateNewWindow({ itemUrl }) {
+          window.open(itemUrl, '_blank', 'noopener')
+        },
+      },
     })
-    , [pathname, query, router])
+    , [pathname, q, router])
 
   const inputRef = useRef(null)
   const formRef = useRef(null)
@@ -78,7 +99,8 @@ export function useAutocomplete() {
       setAutocompleteState((prevState: any) => ({ ...prevState, isOpen: false }))
     },
 
-    // onDoubleClick: (e: any) => { e.target.select() },
+    onDoubleClick: (e: any) => { e.target.select() },
+    onTouchStart: (e: any) => { e.target.select() },
   })
   const { getEnvironmentProps } = autocomplete
 

@@ -8,27 +8,27 @@ import { EmptyLayout } from '~/layouts/EmptyLayout'
 export default function HomePage() {
   return (
     <EmptyLayout>
-      <main className='flex w-full flex-row justify-between min-h-screen'>
-        <Container maxWidth="lg" sx={{ mt: 2 }}>
-          <div className='h-full w-full grid place-items-center'>
-            <div className=' text-center'>
-              <h1 className='text-2xl lg:text-6xl sm:text-3xl md:text-4xl mb-14 font-bold relative'>
+      <div className='mt-16'>
+        <Container maxWidth="lg" sx={{ mt: 10 }}>
+          <div className='flex flex-col items-center justify-center text-center'>
+            <div className='mb-14 font-bold relative inline-flex'>
+              <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
                 Hampi
-                <span className='absolute left-[75%] top-[90%] text-xl font-normal'>Junín</span>
               </h1>
+              <span className='absolute left-[85%] top-[90%] text-xl font-normal'>Junín</span>
+            </div>
 
-              <div className="mb-2 flex  justify-center align-center w-full max-w-[584px]">
-                <div className="flex flex-1">
-                  <AutocompleteInput />
-                </div>
+            <div className="mb-2 flex  justify-center align-center w-full min-w-[320px] max-w-[600px]">
+              <div className="flex flex-1">
+                <AutocompleteInput />
               </div>
-              <div className="flex mt-4 ">
-                <LocationSelectors width={150} />
-              </div>
+            </div>
+            <div className="flex mt-4 ">
+              <LocationSelectors width={150} />
             </div>
           </div>
         </Container>
-      </main>
+      </div>
 
     </EmptyLayout>
   )
