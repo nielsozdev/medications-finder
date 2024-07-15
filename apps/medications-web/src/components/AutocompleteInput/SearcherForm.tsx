@@ -14,13 +14,15 @@ import { Iconify } from '~/ui/Iconify'
 
 export function SearcherForm(props: any) {
   const { formRef, formProps, inputProps, autocompleteState, setAutocompleteState } = props
-  const { onSearchData, openSnackBar, setOpenSnackBar, medicationStatus } = useSearchData()
+  // const searchParams = useSearchParams()
   const pathname = usePathname()
+
+  const { onSearchData, openSnackBar, setOpenSnackBar, medicationStatus } = useSearchData()
   const mdUp = useResponsive('up', 'md')
+
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setAutocompleteState({ query: autocompleteState.query, isOpen: false })
-
     onSearchData(autocompleteState.query)
   }
 
@@ -49,6 +51,7 @@ export function SearcherForm(props: any) {
 
                 <SubmitButton
                   loading={medicationStatus === 'pending' || (pathname === '/results' && medicationStatus === '' && Boolean(autocompleteState.query))}
+                  disabled={(medicationStatus === 'pending' || medicationStatus === '')}
                 />
               </>
             )}
@@ -74,7 +77,7 @@ export function SearcherForm(props: any) {
             }}
             {...inputProps}
             aria-labelledby="autocomplete"
-            disabled={(medicationStatus === 'pending')}
+            disabled={(medicationStatus === 'pending' || (pathname === '/results' && medicationStatus === ''))}
             id="autocomplete"
           />
         </Box>

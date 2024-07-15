@@ -58,6 +58,15 @@ export function AppStoreProvider({ children }: { children: ReactNode }) {
       districtSelected,
       provinceSelected,
       departmentSelected,
+      familyData: [],
+      subFamilyData: [],
+      medicationData: [],
+      productData: [],
+      familyFilterSelected: 'Todos',
+      subFamilyFilterSelected: 'Todos',
+      medicationFilterSelected: 'Todos',
+      productFilterSelected: 'Todos',
+      orderSelected: 'asc',
     })
   }
 

@@ -43,6 +43,58 @@ export const createAppStore = (initialState: AppStoreState) => {
         selectedDistrict: '',
       }
     }),
+    setFamilyData: (data: any[]) => set(() => {
+      return {
+        familyData: data,
+      }
+    }),
+    setSubFamilyData: (data: any[]) => set(() => {
+      return {
+        subFamilyData: data,
+      }
+    }),
+    setMedicationData: (data: any[]) => set(() => {
+      return {
+        medicationData: data,
+      }
+    }),
+    setProductData: (data: any[]) => set(() => {
+      return {
+        productData: data,
+      }
+    }),
+
+    setFamilyFilterSelected: (value: string) => set(() => {
+      return {
+        familyFilterSelected: value,
+        subFamilyFilterSelected: 'Todos',
+        medicationFilterSelected: 'Todos',
+        productFilterSelected: 'Todos',
+      }
+    }),
+    setSubFamilyFilterSelected: (value: string) => set(() => {
+      return {
+        subFamilyFilterSelected: value,
+        medicationFilterSelected: 'Todos',
+        productFilterSelected: 'Todos',
+      }
+    }),
+    setMedicationFilterSelected: (value: string) => set(() => {
+      return {
+        medicationFilterSelected: value,
+        productFilterSelected: 'Todos',
+      }
+    }),
+    setProductFilterSelected: (value: string) => set(() => {
+      return {
+        productFilterSelected: value,
+      }
+    }),
+    setOrderSelected: (value: 'asc' | 'desc') => set(() => {
+      return {
+        orderSelected: value,
+      }
+    }),
 
   })
   ))

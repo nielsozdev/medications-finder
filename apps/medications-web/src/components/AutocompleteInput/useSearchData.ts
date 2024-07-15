@@ -1,13 +1,25 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+
+import { useSearchParams } from 'next/navigation'
 
 import { medicationAction } from '~/actions/medicationAction'
 import { useAppStore } from '~/context/AppStoreProvider/useAppStore'
 
 export function useSearchData() {
+  const searchParams = useSearchParams()
+
   const { setMedicationStatus, departmentSelected, medicationStatus, provinceSelected, districtSelected } = useAppStore((state) => state)
   const [openSnackBar, setOpenSnackBar] = useState({ open: false, message: '' })
 
   const searchTermRef = useRef<string | null>(null)
+
+  useEffect(() => {
+    const query = searchParams.get('query')
+    if (query) {
+      searchTermRef.current = `${query}-${departmentSelected}-${provinceSelected}-${districtSelected}`
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const onSearchData = useCallback((query: string) => {
     const formData = new FormData()

@@ -1,7 +1,5 @@
-import Link from 'next/link'
-
 import { Search as SearchIcon } from '@mui/icons-material'
-import { Box, ListItemButton, alpha, ListItemText } from '@mui/material'
+import { alpha, Box, ListItemButton, ListItemText } from '@mui/material'
 
 import { sanitize } from './sanitize'
 

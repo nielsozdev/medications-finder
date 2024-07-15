@@ -5,21 +5,34 @@ import { Box } from '@mui/material'
 
 // import { Scrollbar } from '../Scrollbar'
 
-// import ProductTableRow from './MedicationItem'
-
 import { MedicationItem } from './MedicationItem'
+import { sortByPrice } from './sortByPrice'
 
 import { useAppStore } from '~/context/AppStoreProvider/useAppStore'
 import { useResponsive } from '~/hooks/useResponsive'
 import { EmptyContent } from '~/ui/EmptyContent'
 
 export function DataTable({ data }: any) {
-  const { setMedicationStatus } = useAppStore((state) => state)
+  const {
+    setMedicationStatus,
+    subFamilyFilterSelected,
+    medicationFilterSelected,
+    productFilterSelected,
+    orderSelected,
+  } = useAppStore((state) => state)
+
   const mdUp = useResponsive('up', 'md')
 
   useEffect(() => {
     setMedicationStatus('success')
   }, [data, setMedicationStatus])
+
+  const dataFiltered = data
+    .filter((subFamily: any) => subFamily.subFamily === subFamilyFilterSelected || subFamilyFilterSelected === 'Todos')
+    .filter((medication: any) => medication.medication === medicationFilterSelected || medicationFilterSelected === 'Todos')
+    .filter((product: any) => product.productName === productFilterSelected || productFilterSelected === 'Todos')
+
+  const dataOrdered = sortByPrice(dataFiltered, orderSelected)
 
   return (
     <>
@@ -31,31 +44,24 @@ export function DataTable({ data }: any) {
           mt: 3,
         }}
       >
-        {data
+        {
+          // data
           // .slice(
           //   table.page * table.rowsPerPage,
           //   table.page * table.rowsPerPage + table.rowsPerPage
           // )
-          .map((medication: any) => (
-            <MedicationItem
-              key={medication.id}
-              item={medication}
-            />
-          ))}
+          dataOrdered
+            .map((item: any) => <MedicationItem key={item.id} item={item} />)
+        }
       </Box>
 
-      {
-        data.length === 0 && (
-          <EmptyContent
-            filled
-            sx={{
-              py: 10,
-              width: '100%',
-            }}
-            title="Sin resultados"
-          />
-        )
-      }
+      { data.length === 0 && (
+        <EmptyContent
+          filled
+          sx={{ py: 10, width: '100%' }}
+          title="Sin resultados"
+        />
+      ) }
     </>
   )
 }

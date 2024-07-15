@@ -49,7 +49,7 @@ export function MedicationItem({ item }: Props) {
     <>
 
       <Card sx={{ display: 'flex', width: '100%' }} onClick={handleCard}>
-        <CardActionArea>
+        <CardActionArea disableRipple>
           <CardHeader
             avatar={(
               <Avatar sx={{ bgcolor: orange[500], color: 'white', fontWeight: 'bold', fontSize: '15px' }} aria-label="recipe">

@@ -21,25 +21,50 @@ export function processResultsDataTable(data: any) {
     const { department } = province
     const [packPrice, unitPrice] = prices
 
-    if (!uniqueProductNames.has(`${product.name}_${idMedication}`)) {
-      uniqueProductNames.set(`${product.name}_${idMedication}`, product)
+    const familyKey = `${family.id}_${family.name}`
+
+    if (!uniqueFamilyNames.has(familyKey)) {
+      uniqueFamilyNames.set(familyKey, {
+        id: family.id,
+        name: family.name,
+      })
     }
 
-    if (!uniqueFamilyNames.has(`${family.id}_${family.name}`)) {
-      uniqueFamilyNames.set(`${family.id}_${family.name}`, family)
+    const subFamilyKey = `${subFamily.id}_${family.id}`
+
+    if (!uniqueSubfamilyNames.has(subFamilyKey)) {
+      uniqueSubfamilyNames.set(subFamilyKey, {
+        id: subFamily.id,
+        name: subFamily.name,
+        family: subFamily.family.name,
+      })
     }
 
-    if (!uniqueSubfamilyNames.has(`${subFamily.id}_${family.id}`)) {
-      uniqueSubfamilyNames.set(`${subFamily.id}_${family.id}`, subFamily)
+    const medicationKey = `${medication.id}_${medication.name}_${subFamily.id}`
+
+    if (!uniqueMedications.has(medicationKey)) {
+      uniqueMedications.set(medicationKey, {
+        id: medication.id,
+        name: medication.name,
+        subFamily: subFamily.name,
+      })
     }
 
-    if (!uniqueMedications.has(`${medication.id}_${medication.name}_${subFamily.id}`)) {
-      uniqueMedications.set(`${medication.id}_${medication.name}_${subFamily.id}`, medication)
+    const productKey = `${product.name}_${idMedication}`
+
+    if (!uniqueProductNames.has(productKey)) {
+      uniqueProductNames.set(productKey, {
+        id: product.id,
+        name: product.name,
+        medication: medication.name,
+      })
     }
 
     productPrices.push({
       id,
       fractions,
+      family: family.name,
+      subFamily: subFamily.name,
       concentration,
       establishmentType,
       establishmentTypeId,

@@ -8,7 +8,7 @@ import { EmptyLayout } from '~/layouts/EmptyLayout'
 export default function HomePage() {
   return (
     <EmptyLayout>
-      <div className='mt-16'>
+      <div className='mt-16 md:mt-32'>
         <Container maxWidth="lg" sx={{ mt: 10 }}>
           <div className='flex flex-col items-center justify-center text-center'>
             <div className='mb-14 font-bold relative inline-flex'>

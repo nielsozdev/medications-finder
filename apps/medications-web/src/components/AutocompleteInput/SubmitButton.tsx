@@ -7,10 +7,11 @@ import CircularProgress, {
 } from '@mui/material/CircularProgress'
 import IconButton from '@mui/material/IconButton'
 
-export function SubmitButton({ loading }: { loading?: boolean }) {
+export function SubmitButton({ loading, disabled }: { disabled?: boolean; loading?: boolean }) {
   return (
     <IconButton
       aria-label="search"
+      disabled={disabled}
       // sx={{ p: '10px' }}
       type="submit"
     >

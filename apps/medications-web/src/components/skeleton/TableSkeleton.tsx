@@ -13,11 +13,24 @@ export default function TableSkeleton({ ...other }: TableRowProps) {
 
   return (
     <Container maxWidth={'lg'}>
-      <Stack alignItems="start" direction="row" spacing={2}>
-        <Skeleton sx={{ borderRadius: 1.5, width: 48, height: 25, flexShrink: 0 }} />
-        <Skeleton sx={{ borderRadius: 1.5, width: 48, height: 25, flexShrink: 0 }} />
-        <Skeleton sx={{ borderRadius: 1.5, width: 48, height: 25, flexShrink: 0 }} />
-      </Stack>
+
+      <Box component='div' sx={{ display: 'flex', alignItems: 'center', gap: 1, justifyContent: 'space-between' }}>
+        {mdUp && (
+          <>
+            <Stack alignItems="start" direction="row" spacing={2}>
+              <Skeleton sx={{ borderRadius: 1.25, width: 150, height: 50, flexShrink: 0 }} />
+              <Skeleton sx={{ borderRadius: 1.25, width: 150, height: 50, flexShrink: 0 }} />
+              <Skeleton sx={{ borderRadius: 1.25, width: 150, height: 50, flexShrink: 0 }} />
+            </Stack>
+          </>
+        )}
+        {!mdUp && (
+          <Skeleton sx={{ borderRadius: 1.1, width: 40, height: 50, flexShrink: 0 }} />
+        )}
+        <Box>
+          <Skeleton sx={{ borderRadius: 1.1, width: 100, height: 50, flexShrink: 0 }} />
+        </Box>
+      </Box>
 
       <Box
         sx={{
@@ -48,9 +61,9 @@ export default function TableSkeleton({ ...other }: TableRowProps) {
                 subheader={(
                   <Box sx={{ color: 'text.primary' }}>
                     <Stack alignItems="start" direction="row" spacing={1}>
-                      <Skeleton sx={{ borderRadius: 1.5, width: 10, height: 20, flexShrink: 0 }} />
+                      <Skeleton sx={{ borderRadius: 1.25, width: 10, height: 20, flexShrink: 0 }} />
                       <Skeleton sx={{ width: '60%', height: 20 }} />
-                      <Skeleton sx={{ borderRadius: 1.5, width: 10, height: 20, flexShrink: 0 }} />
+                      <Skeleton sx={{ borderRadius: 1.25, width: 10, height: 20, flexShrink: 0 }} />
                     </Stack>
                   </Box>
                 )}
@@ -74,13 +87,13 @@ export default function TableSkeleton({ ...other }: TableRowProps) {
                 <Box component="div" sx={{ typography: 'body2', color: 'text.primary', display: 'flex', gap: 2, alignItems: 'center', mt: 2 }}>
                   <Box component='span' sx={{ display: 'flex', alignItems: 'center' }}>
                     <Stack alignItems="start" direction="row" spacing={1}>
-                      <Skeleton sx={{ borderRadius: 1.5, width: 15, height: 25, flexShrink: 0 }} />
+                      <Skeleton sx={{ borderRadius: 1.25, width: 15, height: 25, flexShrink: 0 }} />
                       <Skeleton sx={{ width: 100, height: 25 }} />
                     </Stack>
                   </Box>
                   <Box component='span' sx={{ display: 'flex', alignItems: 'center' }}>
                     <Stack alignItems="start" direction="row" spacing={1}>
-                      <Skeleton sx={{ borderRadius: 1.5, width: 15, height: 25, flexShrink: 0 }} />
+                      <Skeleton sx={{ borderRadius: 1.25, width: 15, height: 25, flexShrink: 0 }} />
                       <Skeleton sx={{ width: 100, height: 25 }} />
                     </Stack>
                   </Box>

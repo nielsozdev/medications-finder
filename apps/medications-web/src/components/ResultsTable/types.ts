@@ -7,6 +7,7 @@ export interface ProductPrices {
   establishmentName: string
   establishmentType: string
   establishmentTypeId: string
+  family: string
   fractions: string
   id: string
   location: string
@@ -15,6 +16,7 @@ export interface ProductPrices {
   pharmaceuticalForm: string
   productName: string
   province: string
+  subFamily: string
   unitPrice: string
   updateAt: Date | null
 }
@@ -24,19 +26,19 @@ export interface UniqueFamilyNames {
   name: string
 }
 
+export interface UniqueSubfamilyNames {
+  family: string
+  id: string
+  name: string
+}
 export interface UniqueMedications {
   id: string
-  idSubFamily: string
   name: string
+  subFamily: string
 }
 
 export interface UniqueProductNames {
-  idMedication: string
-  name: string
-}
-
-export interface UniqueSubfamilyNames {
   id: string
-  idFamily: string
+  medication: string
   name: string
 }

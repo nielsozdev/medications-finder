@@ -6,8 +6,6 @@ import { createAutocomplete } from '@algolia/autocomplete-core'
 import { getAlgoliaResults } from '@algolia/autocomplete-preset-algolia'
 import algoliasearch from 'algoliasearch/lite'
 
-import { useSearchData } from './useSearchData'
-
 import { ENV } from '~/config/env'
 
 const { appId, apiKey, indexName } = ENV
@@ -18,7 +16,6 @@ export function useAutocomplete() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [autocompleteState, setAutocompleteState] = useState<any>({ collections: [], query: '', isOpen: false })
-  const { onSearchData } = useSearchData()
   const q = searchParams.get('query') ?? ''
 
   // useEffect(() => {
