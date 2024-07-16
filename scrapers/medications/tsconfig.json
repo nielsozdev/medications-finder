@@ -24,7 +24,7 @@
         "../../packages/utils"
       ],
       "@noz/db": [
-        "../../packages/prisma"
+        "../../packages/database"
       ]
     }
   },
@@ -52,7 +52,7 @@
       "path": "../../packages/utils"
     },
     {
-      "path": "../../packages/prisma"
+      "path": "../../packages/database"
     }
   ]
 }

@@ -7,17 +7,18 @@ import { getAlgoliaResults } from '@algolia/autocomplete-preset-algolia'
 import algoliasearch from 'algoliasearch/lite'
 
 import { ENV } from '~/config/env'
+import { useAppStore } from '~/context/AppStoreProvider/useAppStore'
 
 const { appId, apiKey, indexName } = ENV
 const searchClient = algoliasearch(appId, apiKey)
 
 export function useAutocomplete() {
+  const { setMedicationStatus } = useAppStore((state) => state)
   const pathname = usePathname()
   const router = useRouter()
   const searchParams = useSearchParams()
-  const [autocompleteState, setAutocompleteState] = useState<any>({ collections: [], query: '', isOpen: false })
   const q = searchParams.get('query') ?? ''
-
+  const [autocompleteState, setAutocompleteState] = useState<any>({ collections: [], query: q, isOpen: false })
   // useEffect(() => {
   //   if (pathname === '/results' && medicationStatus === '' && query) {
   //     setMedicationStatus('pending')
@@ -58,7 +59,27 @@ export function useAutocomplete() {
             // onSearchData(`${itemUrl}`)
             setQuery(`${item.name}`)
             // setIsOpen(false)
-            router.push(`/results?query=${item.name}`)
+            setMedicationStatus('pending')
+            const departmentSelected = localStorage.getItem('departmentSelected')
+            const provinceSelected = localStorage.getItem('provinceSelected')
+            const districtSelected = localStorage.getItem('districtSelected')
+
+            let pathToSearch = `/results?query=${item.name}`
+
+            if (departmentSelected) {
+              pathToSearch = `${pathToSearch}&department=${departmentSelected.toLocaleLowerCase()}`
+            }
+
+            if (provinceSelected) {
+              pathToSearch = `${pathToSearch}&province=${provinceSelected.toLocaleLowerCase()}`
+            }
+
+            if (districtSelected) {
+              pathToSearch = `${pathToSearch}&district=${districtSelected.toLocaleLowerCase()}`
+            }
+
+            router.push(pathToSearch)
+
             // refresh()
           },
           getItemUrl({ item }) {
@@ -83,7 +104,7 @@ export function useAutocomplete() {
         },
       },
     })
-    , [pathname, q, router])
+    , [pathname, q, router, setMedicationStatus])
 
   const inputRef = useRef(null)
   const formRef = useRef(null)

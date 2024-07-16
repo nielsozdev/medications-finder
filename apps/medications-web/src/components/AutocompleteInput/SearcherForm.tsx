@@ -51,7 +51,7 @@ export function SearcherForm(props: any) {
 
                 <SubmitButton
                   loading={medicationStatus === 'pending' || (pathname === '/results' && medicationStatus === '' && Boolean(autocompleteState.query))}
-                  disabled={(medicationStatus === 'pending' || medicationStatus === '')}
+                  disabled={(medicationStatus === 'pending' || (pathname === '/results' && medicationStatus === ''))}
                 />
               </>
             )}

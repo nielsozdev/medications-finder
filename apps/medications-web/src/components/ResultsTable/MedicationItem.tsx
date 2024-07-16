@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 
 import { Avatar, Box, Card, CardActionArea, CardContent, CardHeader } from '@mui/material'
 
-import { orange, yellow } from '@mui/material/colors'
+import { blue, yellow } from '@mui/material/colors'
 
 import { type ProductPrices } from './types'
 
@@ -16,9 +16,9 @@ interface Props {
   item: ProductPrices
 }
 
-function getFirstLetter(str: string) {
-  return str.split(' ').map((s) => s.charAt(0)).join('')
-}
+// function getFirstLetter(str: string) {
+//   return str.split(' ').map((s) => s.charAt(0)).join('')
+// }
 
 export function MedicationItem({ item }: Props) {
   const {
@@ -48,24 +48,28 @@ export function MedicationItem({ item }: Props) {
   return (
     <>
 
+      {/* {getFirstLetter(establishmentName)} */}
       <Card sx={{ display: 'flex', width: '100%' }} onClick={handleCard}>
-        <CardActionArea disableRipple>
+        <CardActionArea disableRipple sx={{ cursor: 'default' }}>
           <CardHeader
             avatar={(
-              <Avatar sx={{ bgcolor: orange[500], color: 'white', fontWeight: 'bold', fontSize: '15px' }} aria-label="recipe">
-                {getFirstLetter(establishmentName)}
-              </Avatar>
+              <Link className='flex  items-center hover:underline' href={buildGoogleMapsUrl(`${address}, ${location.replace('-', ', ')}`)} rel="noreferrer" target="_blank">
+
+                <Avatar sx={{ color: 'white', fontWeight: 'bold', fontSize: '15px', backgroundColor: blue[500] }} aria-label="recipe">
+                  <Iconify icon="majesticons:map-marker-area" width={25} sx={{ color: 'text.primary' }} />
+                </Avatar>
+              </Link>
             )}
-            action={(
-              <Box component="div" sx={{ typography: 'body', color: 'text.disabled', display: 'flex', gap: 1, flexDirection: 'column' }}>
-                <Label color={(establishmentTypeId === '03' ? 'success' : establishmentTypeId === '04' ? 'primary' : 'success')} variant="soft">
-                  {establishmentTypeId === '03' ? 'Farmacia' : establishmentTypeId === '04' ? 'Botica' : 'Farmacia Estab. Salud'}
-                </Label>
-                <Label color={(establishmentType === 'Público' && 'info') || 'secondary'} variant="soft">
-                  {establishmentType}
-                </Label>
-              </Box>
-            )}
+            // action={(
+            //   <Box component="div" sx={{ typography: 'body', color: 'text.disabled', display: 'flex', gap: 1, flexDirection: 'column' }}>
+            //     <Label color={(establishmentTypeId === '03' ? 'success' : establishmentTypeId === '04' ? 'primary' : 'success')} variant="soft">
+            //       {establishmentTypeId === '03' ? 'Farmacia' : establishmentTypeId === '04' ? 'Botica' : 'Farmacia Estab. Salud'}
+            //     </Label>
+            //     <Label color={(establishmentType === 'Público' && 'info') || 'secondary'} variant="soft">
+            //       {establishmentType}
+            //     </Label>
+            //   </Box>
+            // )}
             title={(
               <Box component="div" sx={{ typography: 'h6', color: 'text.primary', display: 'flex', fontWeight: 'bold' }}>
                 {establishmentName}
@@ -77,7 +81,6 @@ export function MedicationItem({ item }: Props) {
                 <Link className='flex  items-center hover:underline' href={buildGoogleMapsUrl(`${address}, ${location.replace('-', ', ')}`)} rel="noreferrer" target="_blank">
                   {/* <span className='flex  items-center hover:underline' onClick={() => navigateToExternalLink()}> */}
                   {/* <a className='flex  items-center hover:underline' href={buildGoogleMapsUrl(`${address}, ${location.replace('-', ', ')}`)} rel="noreferrer" target="_blank"> */}
-                  <Iconify icon="ri:map-pin-2-fill" width={15} sx={{ mr: '5px', color: 'text.primary' }} />
                   {address}
                   <Iconify icon="fluent:open-12-regular" sx={{ mx: '5px', color: 'text.primary' }} />
                 </Link>
@@ -88,12 +91,19 @@ export function MedicationItem({ item }: Props) {
             // )}
           />
           <CardContent content='center'>
-
-            <Box sx={{ typography: 'h6', display: 'flex', alignItems: 'center', fontWeight: 'bold', color: yellow[700] }}>
+            <Box component="div" sx={{ typography: 'body', color: 'text.disabled', display: 'flex', gap: 1, flexDirection: 'row', mb: 1 }}>
+              <Label color={(establishmentTypeId === '03' ? 'success' : establishmentTypeId === '04' ? 'primary' : 'success')} variant="soft">
+                {establishmentTypeId === '03' ? 'Farmacia' : establishmentTypeId === '04' ? 'Botica' : 'Farmacia Estab. Salud'}
+              </Label>
+              <Label color={(establishmentType === 'Público' && 'info') || 'secondary'} variant="soft">
+                {establishmentType}
+              </Label>
+            </Box>
+            <Box sx={{ typography: 'body', display: 'flex', alignItems: 'center', fontWeight: 'bold', color: yellow[700] }}>
               {fcurrency(unitPrice)}
             </Box>
 
-            <Box component="div" sx={{ typography: 'h5', color: 'text.primary', display: 'flex', fontWeight: 'bold' }}>
+            <Box component="div" sx={{ typography: 'h6', color: 'text.primary', display: 'flex', fontWeight: 'bold' }}>
               {/* <Link href={`/medication/${productName}`} className='flex  items-center hover:underline'> */}
               {formatText(productName)}
               {/* </Link> */}
@@ -109,7 +119,7 @@ export function MedicationItem({ item }: Props) {
                 {province}
               </Box>
               <Box component='span' sx={{ display: 'flex', alignItems: 'center' }}>
-                <Iconify width={20} icon="mingcute:map-pin-fill" sx={{ color: 'text.primary' }} />
+                <Iconify width={20} icon="mingcute:map-pin-fill" sx={{ mr: 1, color: 'text.primary' }} />
                 {district}
               </Box>
             </Box>

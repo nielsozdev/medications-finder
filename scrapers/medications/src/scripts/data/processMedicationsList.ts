@@ -7,12 +7,12 @@ import {
 } from '@noz/medications-core/src/types/scraper'
 import { clog } from '@noz/utils'
 
+import { processMedicationData } from './processMedicationData'
+
 import { type DigemidSelectors } from '~/constants/selectors'
 import { saveDataExtracted } from '~/helpers/saveDataExtracted'
 import { saveDataNotExtracted } from '~/helpers/saveDataNotExtracted'
 import { type ElementsForSearch } from '~/types/types'
-
-import { processMedicationData } from './processMedicationData'
 
 export async function processMedicationsList(
   page: Page,

@@ -22,7 +22,11 @@ export async function startPointExtractMedicationsData({
   console.time('extract medications data from web page...')
 
   clog.messageBg('🚀 Iniciando...\n')
-  const { browser, page } = await getBrowserAndPage()
+  const { browser, page } = await getBrowserAndPage({
+    options: {
+      headless: true,
+    },
+  })
 
   try {
     if (locationsList.length === 0 || medicationsList.length === 0) {

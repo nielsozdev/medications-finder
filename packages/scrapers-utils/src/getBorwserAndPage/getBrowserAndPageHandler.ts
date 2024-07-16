@@ -1,11 +1,11 @@
-import { chromium, type Page, type BrowserContext } from 'playwright'
+import { chromium, type BrowserContext, type Page } from 'playwright'
 
 import { getErrorMessage } from '@noz/utils'
 
 export interface GetBrowserAndPageArgs {
-  config?: { screenSize: keyof ScreenSizes }
+  config?: { screenSize: keyof typeof screensSizes }
   options?: any
-  proxyUrl?: string | undefined
+  proxyUrl?: string
 }
 
 const screensSizes = {
@@ -18,16 +18,18 @@ const screensSizes = {
   '8K': { width: 7680, height: 4320 },
 } as const
 
-type ScreenSizes = typeof screensSizes
-export async function getBrowserAndPageHandler (args: GetBrowserAndPageArgs = {}) {
+const proxyUrl = 'http://50.223.242.103:80'
+const navigator = chromium
+
+export async function getBrowserAndPageHandler(args: GetBrowserAndPageArgs = {}) {
   console.log('💻🧭 Iniciando navegador...')
   try {
     const {
-      proxyUrl = undefined,
       options = {},
       config = {
         screenSize: 'hd',
       },
+      proxyUrl: customProxyUrl,
     } = args
 
     const browserOptions = {
@@ -42,20 +44,35 @@ export async function getBrowserAndPageHandler (args: GetBrowserAndPageArgs = {}
       ...options,
     }
 
-    if (proxyUrl) {
-      browserOptions.proxy = proxyUrl
+    const browser = await navigator.launch(browserOptions)
+
+    let contextOptions: any = {
+      javaScriptEnabled: true,
     }
 
-    const browser = await chromium.launch(browserOptions)
+    if (customProxyUrl) {
+      contextOptions = {
+        ...contextOptions,
+        proxy: {
+          server: customProxyUrl,
+        },
+      }
+    } else if (proxyUrl) {
+      contextOptions = {
+        ...contextOptions,
+        proxy: {
+          server: proxyUrl,
+        },
+      }
+    }
 
-    const context: BrowserContext = await browser.newContext({ javaScriptEnabled: true })
+    const context: BrowserContext = await browser.newContext(contextOptions)
     const page: Page = await context.newPage()
 
-    await page.setViewportSize(screensSizes[`${config.screenSize}`])
+    await page.setViewportSize(screensSizes[config.screenSize])
 
     return { browser, page }
   } catch (error) {
-    // throw new Error(`Error al alvantar el navegador ${err.message}`)
-    throw new Error(`Error al alzar el navegador: ${getErrorMessage(error)}`)
+    throw new Error(`Error al iniciar el navegador: ${getErrorMessage(error)}`)
   }
 }

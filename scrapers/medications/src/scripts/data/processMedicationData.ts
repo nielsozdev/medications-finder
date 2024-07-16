@@ -1,12 +1,12 @@
 import { type ExtractMedicationsUrl, type DataNotExtracted, type ExtractedDataResult } from '@noz/medications-core/src/types/scraper'
 import { clog } from '@noz/utils'
 
-import type { Page } from 'playwright'
-import type { ElementsForSearch } from '~/types/types'
-
 import { type DigemidSelectors } from '~/constants/selectors'
 import { getSuggestionElements } from '~/helpers/getSuggestionElements'
 import { processMedicationSuggestionsList } from '~/helpers/processMedicationSuggestionsList'
+import type { ElementsForSearch } from '~/types/types'
+
+import type { Page } from 'playwright'
 
 export async function processMedicationData(
   page: Page,

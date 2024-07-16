@@ -26,7 +26,7 @@ export async function getSuggestionElements(
     await page.waitForLoadState('domcontentloaded')
 
     await fillInputText(page, {
-      delay: 50,
+      delay: 300,
       element: inputSearchElement,
       text: medication,
     })

@@ -7,6 +7,9 @@ import {
 import { pressButtonSearch } from '@noz/scrapers-utils'
 import { clog } from '@noz/utils'
 
+import { extractDataFromResponseWeb } from './extractDataFromResponseWeb'
+import { logSuggestionsList } from './logSuggestionsList'
+
 import { type DigemidSelectors } from '~/constants/selectors'
 // import { type MedicationsExtractedDataFromDigemidWeb, type ExtractedDataResult } from '~/types/medicationsData'
 import { type ElementsForSearch } from '~/types/types'
@@ -14,11 +17,10 @@ import { existElement } from '~/utils/existElement'
 import { fillInputText } from '~/utils/fillInputText'
 import { fillSelectInputs } from '~/utils/fillSelectInputs'
 
-import { extractDataFromResponseWeb } from './extractDataFromResponseWeb'
-import { logSuggestionsList } from './logSuggestionsList'
-
 import type { Locator, Page } from 'playwright'
 
+const numberOfMedicationsToExtract = 5
+const intervaloDeExtraccion = 11000
 export async function processMedicationSuggestionsList(
   page: Page,
   {
@@ -50,15 +52,17 @@ export async function processMedicationSuggestionsList(
     await logSuggestionsList({ medication, suggestionElements: suggestionElementsList })
 
     for (const [suggestionIndex, $suggestionElement] of suggestionElementsList.entries()) {
+      await page.waitForLoadState('domcontentloaded')
+
       await fillInputText(page, {
-        delay: 30,
+        delay: 300,
         element: inputSearchElement,
         text: medication,
       })
 
       suggestion = (await $suggestionElement.textContent()) ?? ''
 
-      await $suggestionElement.click({ timeout: 500 })
+      await $suggestionElement.click({ timeout: 1000 })
 
       await fillSelectInputs(page, { selectors, department })
 
@@ -111,7 +115,11 @@ export async function processMedicationSuggestionsList(
       }
 
       await buttonCleanElement.click()
-      await page.waitForLoadState('domcontentloaded')
+      // if (suggestionIndex === numberOfMedicationsToExtract - 1) {
+      console.log('🚀 Esperando...' + intervaloDeExtraccion / 1000 + ' segundos')
+      await page.waitForTimeout(intervaloDeExtraccion)
+      // await new Promise((resolve) => setTimeout(resolve, intervaloDeExtraccion))
+      // }
     }
 
     const newData: ExtractedDataResult = {
