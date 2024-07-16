@@ -1,7 +1,6 @@
 import { Search as SearchIcon } from '@mui/icons-material'
 import { alpha, Box, ListItemButton, ListItemText } from '@mui/material'
-
-import { sanitize } from './sanitize'
+import DOMPurify from 'dompurify'
 
 export function SuggestionItem(props: any) {
   const { item, itemIndex, index, autocompleteState, ...restOfprops } = props
@@ -51,4 +50,8 @@ export function SuggestionItem(props: any) {
       {/* </Link> */}
     </ListItemButton>
   )
+}
+
+export const sanitize = (html: string) => {
+  return DOMPurify.sanitize(html, { ALLOWED_TAGS: ['mark'] })
 }

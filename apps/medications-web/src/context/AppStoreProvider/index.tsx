@@ -17,8 +17,8 @@ export function AppStoreProvider({ children }: { children: ReactNode }) {
   if (!storeRef.current) {
     const districtsearchParams = searchParams.get('district')
     const provinceSearchParams = searchParams.get('province')
-    const departmentsearchParams = searchParams.get('department')
-    const departmentInLocalStorage = localStorage.getItem('departmentSelected')
+    // const departmentsearchParams = searchParams.get('department')
+    // const departmentInLocalStorage = localStorage.getItem('departmentSelected')
     const provinceInLocalStorage = localStorage.getItem('provinceSelected')
     const districtInLocalStorage = localStorage.getItem('districtSelected')
 
@@ -40,11 +40,11 @@ export function AppStoreProvider({ children }: { children: ReactNode }) {
       })),
     }))
 
+    localStorage.setItem('departmentSelected', 'JUNIN')
     const provinces: Provinces[] = departments.find((dep) => dep.name === 'JUNIN')?.provinces ?? []
 
     const districts: Districts[] = provinces.find((prov) => prov.name.toUpperCase() === provinceInLocalStorage?.toUpperCase())?.districts ?? []
-
-    const departmentSelected = departmentsearchParams?.toUpperCase() ?? departmentInLocalStorage ?? 'JUNIN'
+    // const departmentSelected = departmentsearchParams?.toUpperCase() ?? departmentInLocalStorage ?? 'JUNIN'
     const provinceSelected = provinceSearchParams?.toUpperCase() ?? provinceInLocalStorage ?? ''
     const districtSelected = districtsearchParams?.toUpperCase() ?? districtInLocalStorage ?? ''
 
@@ -57,7 +57,7 @@ export function AppStoreProvider({ children }: { children: ReactNode }) {
       departments,
       districtSelected,
       provinceSelected,
-      departmentSelected,
+      departmentSelected: 'JUNIN',
       familyData: [],
       subFamilyData: [],
       medicationData: [],

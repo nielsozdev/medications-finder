@@ -83,7 +83,28 @@ export function useAutocomplete() {
             // refresh()
           },
           getItemUrl({ item }) {
-            return `/results?query=${encodeURIComponent(`${item.name}`)}`
+            // Cuando se ahce enter en una opcion algolia, esto se llama
+            const departmentSelected = localStorage.getItem('departmentSelected')
+            const provinceSelected = localStorage.getItem('provinceSelected')
+            const districtSelected = localStorage.getItem('districtSelected')
+
+            let pathToSearch = `/results?query=${item.name}`
+
+            if (departmentSelected) {
+              pathToSearch = `${pathToSearch}&department=${departmentSelected.toLocaleLowerCase()}`
+            }
+
+            if (provinceSelected) {
+              pathToSearch = `${pathToSearch}&province=${provinceSelected.toLocaleLowerCase()}`
+            }
+
+            if (districtSelected) {
+              pathToSearch = `${pathToSearch}&district=${districtSelected.toLocaleLowerCase()}`
+            }
+
+            return pathToSearch
+
+            // return `/results?query=${encodeURIComponent(`${item.name}`)}`
           },
 
         },
