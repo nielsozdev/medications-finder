@@ -24,8 +24,8 @@ export function SearcherForm(props: any) {
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setAutocompleteState({ query: autocompleteState.query, isOpen: false })
     onSearchData(autocompleteState.query)
+    setAutocompleteState({ query: autocompleteState.query, isOpen: false })
   }
 
   return (
