@@ -9,15 +9,17 @@ import { SnackBar } from './Snackbar'
 import { SubmitButton } from './SubmitButton'
 import { useSearchData } from './useSearchData'
 
+import { useAppStore } from '~/context/AppStoreProvider/useAppStore'
 import { useResponsive } from '~/hooks/useResponsive'
 import { Iconify } from '~/ui/Iconify'
 
 export function SearcherForm(props: any) {
   const { formRef, formProps, inputProps, autocompleteState, setAutocompleteState } = props
+  const { medicationStatus } = useAppStore((state) => state)
   // const searchParams = useSearchParams()
   const pathname = usePathname()
 
-  const { onSearchData, openSnackBar, setOpenSnackBar, medicationStatus } = useSearchData()
+  const { onSearchData, openSnackBar, setOpenSnackBar } = useSearchData()
   const mdUp = useResponsive('up', 'md')
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
