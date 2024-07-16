@@ -14,9 +14,8 @@ import { useResponsive } from '~/hooks/useResponsive'
 import { Iconify } from '~/ui/Iconify'
 
 export function SearcherForm(props: any) {
-  const { formRef, formProps, inputProps, autocompleteState, setAutocompleteState } = props
+  const { formRef, formProps, inputProps, autocompleteState } = props
   const { medicationStatus } = useAppStore((state) => state)
-  // const searchParams = useSearchParams()
   const pathname = usePathname()
 
   const { onSearchData, openSnackBar, setOpenSnackBar } = useSearchData()
@@ -25,7 +24,6 @@ export function SearcherForm(props: any) {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     onSearchData(autocompleteState.query)
-    setAutocompleteState({ query: autocompleteState.query, isOpen: false })
   }
 
   return (

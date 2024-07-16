@@ -1,21 +1,18 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { usePathname, useSearchParams } from 'next/navigation'
 
 import { createAutocomplete } from '@algolia/autocomplete-core'
 import { getAlgoliaResults } from '@algolia/autocomplete-preset-algolia'
 import algoliasearch from 'algoliasearch/lite'
 
 import { ENV } from '~/config/env'
-import { useAppStore } from '~/context/AppStoreProvider/useAppStore'
 
 const { appId, apiKey, indexName } = ENV
 const searchClient = algoliasearch(appId, apiKey)
 
 export function useAutocomplete() {
-  const { setMedicationStatus } = useAppStore((state) => state)
   const pathname = usePathname()
-  const router = useRouter()
   const searchParams = useSearchParams()
   const q = searchParams.get('query') ?? ''
   const [autocompleteState, setAutocompleteState] = useState<any>({ collections: [], query: q, isOpen: false })
@@ -36,6 +33,15 @@ export function useAutocomplete() {
       openOnFocus: true,
       placeholder: 'Buscar precios medicamentos en Junín',
       onStateChange: ({ state }) => { setAutocompleteState(state) },
+      navigator: {
+        navigate({ itemUrl }) { window.location.assign(itemUrl) },
+        navigateNewTab({ itemUrl }) {
+          const windowReference = window.open(itemUrl, '_blank', 'noopener')
+
+          if (windowReference) { windowReference.focus() }
+        },
+        navigateNewWindow({ itemUrl }) { window.open(itemUrl, '_blank', 'noopener') },
+      },
       getSources: ({ query }) => [
         {
           sourceId: 'querySuggestions',
@@ -59,73 +65,15 @@ export function useAutocomplete() {
             // onSearchData(`${itemUrl}`)
             setQuery(`${item.name}`)
             // setIsOpen(false)
-            setMedicationStatus('pending')
-            const departmentSelected = localStorage.getItem('departmentSelected')
-            const provinceSelected = localStorage.getItem('provinceSelected')
-            const districtSelected = localStorage.getItem('districtSelected')
-
-            let pathToSearch = `/results?query=${item.name}`
-
-            if (departmentSelected) {
-              pathToSearch = `${pathToSearch}&department=${departmentSelected.toLocaleLowerCase()}`
-            }
-
-            if (provinceSelected) {
-              pathToSearch = `${pathToSearch}&province=${provinceSelected.toLocaleLowerCase()}`
-            }
-
-            if (districtSelected) {
-              pathToSearch = `${pathToSearch}&district=${districtSelected.toLocaleLowerCase()}`
-            }
-
-            router.push(pathToSearch)
 
             // refresh()
-          },
-          getItemUrl({ item }) {
-            // Cuando se ahce enter en una opcion algolia, esto se llama
-            const departmentSelected = localStorage.getItem('departmentSelected')
-            const provinceSelected = localStorage.getItem('provinceSelected')
-            const districtSelected = localStorage.getItem('districtSelected')
-
-            let pathToSearch = `/results?query=${item.name}`
-
-            if (departmentSelected) {
-              pathToSearch = `${pathToSearch}&department=${departmentSelected.toLocaleLowerCase()}`
-            }
-
-            if (provinceSelected) {
-              pathToSearch = `${pathToSearch}&province=${provinceSelected.toLocaleLowerCase()}`
-            }
-
-            if (districtSelected) {
-              pathToSearch = `${pathToSearch}&district=${districtSelected.toLocaleLowerCase()}`
-            }
-
-            return pathToSearch
-
-            // return `/results?query=${encodeURIComponent(`${item.name}`)}`
           },
 
         },
       ],
-      navigator: {
-        navigate({ itemUrl }) {
-          window.location.assign(itemUrl)
-        },
-        navigateNewTab({ itemUrl }) {
-          const windowReference = window.open(itemUrl, '_blank', 'noopener')
 
-          if (windowReference) {
-            windowReference.focus()
-          }
-        },
-        navigateNewWindow({ itemUrl }) {
-          window.open(itemUrl, '_blank', 'noopener')
-        },
-      },
     })
-    , [pathname, q, router, setMedicationStatus])
+    , [pathname, q])
 
   const inputRef = useRef(null)
   const formRef = useRef(null)

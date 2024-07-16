@@ -23,14 +23,14 @@ export function Panel(props: any) {
             const { source, items } = collection
 
             return (
-              <div key={`source-${index}`} className="aa-Source w-full">
+              <div key={`source-${index}`} className="w-full">
                 {items.length > 0 && (
                   <List
                     key={autocompleteState.collections.length}
                     disablePadding
                   >
                     <ul
-                      className="aa-List"
+                      className="last:mb-0"
                       {...autocomplete?.getListProps()}
                     >
                       {items.map((item: any, itemIndex: number) => (

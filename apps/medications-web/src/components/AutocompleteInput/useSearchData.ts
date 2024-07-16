@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 
-import { useSearchParams, useRouter } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 
+import { medicationAction } from '~/actions/medicationAction'
 import { useAppStore } from '~/context/AppStoreProvider/useAppStore'
 
 export function useSearchData() {
   const searchParams = useSearchParams()
-  const router = useRouter()
+  // const router = useRouter()
   const { setMedicationStatus, medicationStatus } = useAppStore((state) => state)
   const [openSnackBar, setOpenSnackBar] = useState({ open: false, message: '' })
 
@@ -24,6 +25,7 @@ export function useSearchData() {
   }, [])
 
   const onSearchData = (query: string) => {
+    const formData = new FormData()
     const departmentSelected = localStorage.getItem('departmentSelected')
     const provinceSelected = localStorage.getItem('provinceSelected')
     const districtSelected = localStorage.getItem('districtSelected')
@@ -32,27 +34,12 @@ export function useSearchData() {
       setOpenSnackBar({ open: true, message: 'Ingrese un término de búsqueda válido' })
     } else {
       if (searchTermRef.current !== `${query}-${departmentSelected}-${provinceSelected}-${districtSelected}`) {
-        // formData.append('query', query)
-        let pathToSearch = `/results?query=${query}`
-
-        if (departmentSelected) {
-          pathToSearch = `${pathToSearch}&department=${departmentSelected.toLocaleLowerCase()}`
-        }
-
-        if (provinceSelected) {
-          pathToSearch = `${pathToSearch}&province=${provinceSelected.toLocaleLowerCase()}`
-        }
-
-        if (districtSelected) {
-          pathToSearch = `${pathToSearch}&district=${districtSelected.toLocaleLowerCase()}`
-        }
-
-        router.push(pathToSearch)
-        // departmentSelected && formData.append('department', departmentSelected)
-        // provinceSelected && formData.append('province', provinceSelected)
-        // districtSelected && formData.append('district', districtSelected)
+        formData.append('query', query)
+        departmentSelected && formData.append('department', departmentSelected)
+        provinceSelected && formData.append('province', provinceSelected)
+        districtSelected && formData.append('district', districtSelected)
         setMedicationStatus('pending')
-        // medicationAction(formData)
+        medicationAction(formData)
 
         searchTermRef.current = `${query}-${departmentSelected}-${provinceSelected}-${districtSelected}`
       }

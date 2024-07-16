@@ -4,7 +4,7 @@ import { AutocompleteInput } from '~/components/AutocompleteInput'
 import { LocationSelectors } from '~/components/LocationSelectors'
 import { EmptyLayout } from '~/layouts/EmptyLayout'
 
-// export const dynamic = 'force-dynamic'bun start
+// export const dynamic = 'force-dynamic'
 export default function HomePage() {
   return (
     <EmptyLayout>
