@@ -5,34 +5,33 @@ import Box, { type BoxProps } from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Stack from '@mui/material/Stack'
 import { alpha, useTheme } from '@mui/material/styles'
-import Typography from '@mui/material/Typography'
 
 import { bgGradient } from '~/theme/css'
 import { MotionContainer } from '~/ui/animate/MotionContainer'
 import { varFade } from '~/ui/animate/variants'
 
-const CONTACTS = [
-  {
-    country: 'Bali',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(239) 555-0108',
-  },
-  {
-    country: 'London',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(319) 555-0115',
-  },
-  {
-    country: 'Prague',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(252) 555-0126',
-  },
-  {
-    country: 'Moscow',
-    address: '508 Bridle',
-    phoneNumber: '(307) 555-0133',
-  },
-]
+// const CONTACTS = [
+//   {
+//     country: 'Bali',
+//     address: '508 Bridle Avenue Newnan, GA 30263',
+//     phoneNumber: '(239) 555-0108',
+//   },
+//   {
+//     country: 'London',
+//     address: '508 Bridle Avenue Newnan, GA 30263',
+//     phoneNumber: '(319) 555-0115',
+//   },
+//   {
+//     country: 'Prague',
+//     address: '508 Bridle Avenue Newnan, GA 30263',
+//     phoneNumber: '(252) 555-0126',
+//   },
+//   {
+//     country: 'Moscow',
+//     address: '508 Bridle',
+//     phoneNumber: '(307) 555-0133',
+//   },
+// ]
 
 export function SuggestionHero() {
   const theme = useTheme()
@@ -58,16 +57,16 @@ export function SuggestionHero() {
             textAlign: { xs: 'center', md: 'unset' },
           }}
         >
-          <TextAnimate sx={{ color: 'primary.main' }} text="Where" variants={varFade().inRight} />
+          <TextAnimate sx={{ color: 'primary.main' }} text="Dónde" variants={varFade().inRight} />
           <br />
 
           <Stack direction="row" display="inline-flex" spacing={2} sx={{ color: 'common.white' }}>
-            <TextAnimate text="to" />
-            <TextAnimate text="find" />
-            <TextAnimate text="us?" />
+            <TextAnimate text="nos" />
+            <TextAnimate text="puedes" />
+            <TextAnimate text="encontrar?" />
           </Stack>
 
-          <Stack
+          {/* <Stack
             alignItems={{ xs: 'center', md: 'unset' }}
             direction={{ xs: 'column', md: 'row' }}
             spacing={5}
@@ -88,7 +87,7 @@ export function SuggestionHero() {
                 </m.div>
               </Stack>
             ))}
-          </Stack>
+          </Stack> */}
         </Box>
       </Container>
     </Box>

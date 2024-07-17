@@ -15,7 +15,6 @@ interface ResultsPageProps {
     query?: string
   }
 }
-// export const dynamic = 'force-dynamic'
 
 export default function ResultsPage({ searchParams }: ResultsPageProps) {
   const query = searchParams?.query ?? ''
@@ -35,6 +34,7 @@ export default function ResultsPage({ searchParams }: ResultsPageProps) {
           />
         </Suspense>
       )}
+
       {
         !query && (
           <Box

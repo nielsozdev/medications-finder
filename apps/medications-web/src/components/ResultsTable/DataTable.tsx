@@ -41,7 +41,7 @@ export function DataTable({ data }: any) {
           display: 'grid',
           gridTemplateColumns: mdUp ? 'repeat(auto-fit, minmax(400px, 1fr))' : '1fr',
           gap: 2,
-          mt: 3,
+          mt: 1,
         }}
       >
         {

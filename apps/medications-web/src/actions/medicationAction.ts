@@ -13,6 +13,7 @@ export async function medicationAction(formData: FormData) {
   const district = districtValue ? `&district=${districtValue.toLowerCase()}` : ''
 
   const path = `/results?query=${query}${department}${province}${district}`
+
   redirect(path)
 
   return await Promise.resolve()

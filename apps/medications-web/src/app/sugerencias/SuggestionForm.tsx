@@ -15,14 +15,14 @@ export function SuggestionForm() {
     <Stack component={MotionViewport} spacing={5}>
       <m.div variants={varFade().inUp}>
         <Typography variant="h3">
-          Feel free to contact us. <br />
-          We&apos;ll be glad to hear from you, buddy.
+          Siente libre de contactarnos. <br />
+          Estaremos encantados de conocerte, amigo.😊
         </Typography>
       </m.div>
 
       <Stack spacing={3}>
         <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Name" />
+          <TextField fullWidth label="Nombre" />
         </m.div>
 
         <m.div variants={varFade().inUp}>
@@ -30,17 +30,17 @@ export function SuggestionForm() {
         </m.div>
 
         <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Subject" />
+          <TextField fullWidth label="Asunto" />
         </m.div>
 
         <m.div variants={varFade().inUp}>
-          <TextField fullWidth multiline label="Enter your message here." rows={4} />
+          <TextField fullWidth multiline label="Escribe tu mensaje aquí." rows={4} />
         </m.div>
       </Stack>
 
       <m.div variants={varFade().inUp}>
         <Button size="large" variant="contained">
-          Submit Now
+          Enviar Ahora
         </Button>
       </m.div>
     </Stack>

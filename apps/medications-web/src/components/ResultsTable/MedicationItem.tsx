@@ -56,7 +56,7 @@ export function MedicationItem({ item }: Props) {
               <Link className='flex  items-center hover:underline' href={buildGoogleMapsUrl(`${address}, ${location.replace('-', ', ')}`)} rel="noreferrer" target="_blank">
 
                 <Avatar sx={{ color: 'white', fontWeight: 'bold', fontSize: '15px', backgroundColor: blue[500] }} aria-label="recipe">
-                  <Iconify icon="majesticons:map-marker-area" width={25} sx={{ color: 'text.primary' }} />
+                  <Iconify icon="majesticons:map-marker-area" width={25} sx={{ color: 'white' }} />
                 </Avatar>
               </Link>
             )}

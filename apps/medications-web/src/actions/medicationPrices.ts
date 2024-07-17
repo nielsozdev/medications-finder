@@ -2,7 +2,6 @@
 
 import { revalidatePath } from 'next/cache'
 
-// import prisma from '@noz/db/next'
 import { prisma } from '@noz/db'
 
 import { findMedication } from '~/helpers/getCorrectSuggestion'
@@ -15,15 +14,10 @@ interface GetMedicationPrices {
   province?: string
   query: string
 }
+
 export async function getMedicationPrices(params: GetMedicationPrices) {
-  const {
-    department,
-    district,
-    //  page,
-    pageSize,
-    province,
-    query,
-  } = params
+  const { department, district, pageSize, province, query } = params
+
   const departmentVal = department ? `&department=${department.toLowerCase()}` : ''
   const provinceVal = province ? `&province=${province.toLowerCase()}` : ''
   const districtVal = district ? `&district=${district.toLowerCase()}` : ''
@@ -40,27 +34,19 @@ export async function getMedicationPrices(params: GetMedicationPrices) {
       // skip,
       take: pageSize,
       where: {
-        // product: {
-        //   name: {
-        //     contains: searchTerm.toUpperCase(),
-        //     mode: 'insensitive',
-        //   },
-        // },
         OR: [
           {
             product: {
               name: {
-                contains: searchTerm,
-                mode: 'insensitive',
+                contains: searchTerm.toUpperCase(), mode: 'insensitive',
               },
             },
           },
           {
-          // Search within related medication based on name (optional)
             product: {
               medication: {
                 name: {
-                  contains: searchTerm,
+                  contains: searchTerm.toUpperCase(),
                   mode: 'insensitive',
                 },
               },
@@ -69,7 +55,6 @@ export async function getMedicationPrices(params: GetMedicationPrices) {
         ],
         establishment: {
           district: {
-            // Check if district is provided
             ...(district ? { name: district.toUpperCase() } : {}),
             province: {
               ...(province ? { name: province.toUpperCase() } : {}),
@@ -112,8 +97,8 @@ export async function getMedicationPrices(params: GetMedicationPrices) {
 
       },
     })
+
     revalidatePath(path)
-    // await createFolderAndSaveFile('./src/data/results.temp.json', data)
 
     return data
   } catch (error) {

@@ -1,8 +1,5 @@
-// import prisma from '@noz/db/next'
 import { prisma } from '@noz/db'
 import { createFolderAndSaveFile } from '@noz/utils'
-
-export const dynamic = 'force-dynamic'
 
 export async function GET(request: Request) {
   const data = await prisma.medication.findMany({
